@@ -10,22 +10,25 @@ import UIKit
 import HealthKit
 
 class HealthKitController {
+    
     // Singleton to keep the same HKHealthStore throughout the app.
     static let sharedInstance = HealthKitController()
+    
     // Variables for healthKit
     // This is the HealthKit Store we will be accessing for all of our app
     let healthKitStore: HKHealthStore = HKHealthStore()
     var weights: [Double] = []
-    var heartRates: [Double] = []
     var calories: [Double] = []
+    var heartRates: [Double] = []
     var timestampsWeight: [Date] = []
-    var timestampsHeartRate: [Date] = []
     var timestampsCalorie: [Date] = []
+    var timestampsHeartRate: [Date] = []
     var observerQuery: HKObserverQuery!
+    
     // Units for HKObjects
     let weightUnit = HKUnit.pound()
-    let heartRateUnit = HKUnit(from: "count/min")
     let calorieUnit = HKUnit.kilocalorie()
+    let heartRateUnit = HKUnit(from: "count/min")
     
     // Function called to request authorization from the Health app.
     func authorizeHeatlhKitInApp( completion: @escaping (Bool) -> Void) {
@@ -76,44 +79,59 @@ class HealthKitController {
         }
     }
     
+    // Function to get the heart rate from the health app.
     func checkHeartRate(completion: @escaping(Double) -> Void) {
+        
+        // Needed placeholder variable.
         var heartRate: Double = 0.0
+        
+        // Set and unwrap the heart rate sample type from HealthKit
         guard let heartRateType = HKSampleType.quantityType(forIdentifier: .heartRate) else {return}
+        
+        // Run a query to pull the heart rate data from the Health app.
         let queryHeartRate = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, results, error) in
+            // Unwrap and handle the errors.
             if let error = error {
                 print(error.localizedDescription)
                 print("Error with readProfile function - heartRate query")
             }
-            if let results = results {
-                print(results)
-                for result in results {
-                    if let sample = result as? HKQuantitySample {
-                        print(sample.quantity)
-                    }
-                }
-            }
+            // Unwrap the latest result from the data
             if let result = results?.last as? HKQuantitySample {
+                // Convert the result to a double from the appropriate units and set it to the placeholder declared above.
                 heartRate = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                // Run the completion handler and pass back the heart rate.
                 completion(heartRate)
             }
         }
+        // Run the heart rate check query.
         healthKitStore.execute(queryHeartRate)
     }
     
-    func heartRateObserver () {
+    // Function to set up an observer to pull new heart rates whenever the watch reads an updated heart rate.
+    func heartRateObserver (completion: @escaping (Double) -> Void) {
+        
+        // Set and unwrap the heart rate sample type from HealthKit
         guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {return}
         
+        // Setup the observer from the sample heart rate above.
         let queryHeartRate = HKObserverQuery(sampleType: sampleType, predicate: nil) { (query, completionHandler, error) in
+            // Unwrap and handle any errors.
             if let error = error {
-                print(error.localizedDescription)
                 print("Error in HKOberserver")
+                print(error.localizedDescription)
             }
+            
+            // Run the function to pull and read the heart rate when a new heart rate update is recieved.
             self.checkHeartRate(completion: { (heartRate) in
+                // Add the new heart rate to the total number of heart rates tracked.
                 self.heartRates.append(heartRate)
-                print(self.heartRates)
+                // Run the completion handler for the observer query to allow it to continue running
                 completionHandler()
+                // Run the completion for the function to pass the heart rate out and send it to the watch.
+                completion(heartRate)
             })
         }
+        // Run the observer query.
         healthKitStore.execute(queryHeartRate)
     }
 }

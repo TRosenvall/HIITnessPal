@@ -9,13 +9,14 @@
 import Foundation
 import CloudKit
 
-
 class Reminder: Equatable, Codable {
     
-    var enabled: Bool
+    // Reminder Variables
     var uuid: String
+    var enabled: Bool
     var fireDate: Date
     
+    // Reminder Date
     var fireTimeAsString: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .none
@@ -23,14 +24,17 @@ class Reminder: Equatable, Codable {
         return formatter.string(from: fireDate)
     }
     
-    init(fireDate: Date, enabled: Bool, uuid: String = UUID().uuidString) {
-        self.fireDate = fireDate
-        self.enabled = enabled
+    // Reminder Initializer
+    init(uuid: String = UUID().uuidString,
+         enabled: Bool,
+         fireDate: Date) {
         self.uuid = uuid
+        self.enabled = enabled
+        self.fireDate = fireDate
     }
     
+    // Reminder Equatablility
     static func ==(lhs: Reminder, rhs: Reminder) -> Bool {
         return lhs.uuid == rhs.uuid
-        
     }
 }

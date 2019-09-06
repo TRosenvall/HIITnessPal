@@ -58,9 +58,9 @@
 		16A2F14D2321B2E300080F3C /* HiitnessDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */; };
 		16A2F14F2321B2EF00080F3C /* HiitnessWorkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */; };
 		16A2F1592321B36F00080F3C /* HiitnessProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */; };
-		16A2F1642321B46300080F3C /* MyHiitnessPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */; };
-		16A2F1662321B4E100080F3C /* HiitnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */; };
+		16A2F1662321B4E100080F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1652321B4E100080F3C /* Main.storyboard */; };
 		48E870433B75FE7831D151F4 /* Pods_HIITnessPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */; };
+		85C4F51023225EBA00E3C372 /* MyHiitnessPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */; };
 		901CA412A695EE06EA9D1DCB /* Pods_HIITnessPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */; };
 		E63445BD0E70B6A5A52EF395 /* Pods_HIITnessPalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */; };
 /* End PBXBuildFile section */
@@ -141,10 +141,10 @@
 		16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessDashboard.storyboard; sourceTree = "<group>"; };
 		16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessWorkout.storyboard; sourceTree = "<group>"; };
 		16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessProfile.storyboard; sourceTree = "<group>"; };
-		16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHiitnessPlan.storyboard; sourceTree = "<group>"; };
-		16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessMain.storyboard; sourceTree = "<group>"; };
+		16A2F1652321B4E100080F3C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalUITests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalUITests/Pods-HIITnessPalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyHiitnessPlan.storyboard; sourceTree = "<group>"; };
 		93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPal.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal.release.xcconfig"; sourceTree = "<group>"; };
 		9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalTests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalTests/Pods-HIITnessPalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 			children = (
 				16A2F0E123218B6300080F3C /* HIITnessPal.entitlements */,
 				16A2F0D923218AE100080F3C /* Models */,
-				16A2F0DA23218AE800080F3C /* Controllers */,
 				16A2F0DC23218AFD00080F3C /* Views */,
+				16A2F0DA23218AE800080F3C /* Controllers */,
 				16A2F0DD23218B2400080F3C /* Storyboards */,
 				16A2F0E623218C2B00080F3C /* Helpers + Extensions */,
 			);
@@ -300,9 +300,9 @@
 			children = (
 				16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */,
 				16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */,
-				16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */,
+				16A2F1652321B4E100080F3C /* Main.storyboard */,
 				16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */,
-				16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */,
+				85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -522,12 +522,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A2F1642321B46300080F3C /* MyHiitnessPlan.storyboard in Resources */,
-				16A2F1662321B4E100080F3C /* HiitnessMain.storyboard in Resources */,
+				16A2F1662321B4E100080F3C /* Main.storyboard in Resources */,
 				16A2F14F2321B2EF00080F3C /* HiitnessWorkout.storyboard in Resources */,
 				16A2F0F223219ED500080F3C /* nunito in Resources */,
 				16A2F1592321B36F00080F3C /* HiitnessProfile.storyboard in Resources */,
 				16A2F14D2321B2E300080F3C /* HiitnessDashboard.storyboard in Resources */,
+				85C4F51023225EBA00E3C372 /* MyHiitnessPlan.storyboard in Resources */,
 				16A2F0B523218A1A00080F3C /* LaunchScreen.storyboard in Resources */,
 				16A2F0B223218A1A00080F3C /* Assets.xcassets in Resources */,
 				16A2F0F423219FD700080F3C /* GifAssets.xcassets in Resources */,
@@ -850,13 +850,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -870,13 +870,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -17,30 +17,46 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var ageTextField: PasteDisabledTextField!
     @IBOutlet weak var weightTextField: PasteDisabledTextField!
-    
     @IBOutlet weak var titleView: UIView!
-    
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     // Set the user profile and create a Picker View for the gender
     let profile = ProfileController.sharedInstance.profile
     let genderPicker = UIPickerView()
     
+    // Set the status bar to show as white.
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
+        // Set the title views gradient and shadow.
+        SetGradient.setGradient(view: titleView, mainColor: .getHIITPrimaryOrange, secondColor: .getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
-        // Hide the label for if access is denied to HealthKit.
+        // Set the progressView, backButton, nextButton, and preferenceLabel for first time users
+        if ProfileController.sharedInstance.profile.firstLogin {
+            progressView.isHidden = false
+            nextButton.isHidden = false
+            preferenceLabel.isHidden = false
+            backButton.isHidden = true
+        } else {
+            progressView.isHidden = true
+            preferenceLabel.isHidden = true
+            backButton.isHidden = false
+            nextButton.setTitle("Save", for: .normal)
+        }
         
         // Call the functions to setup the views, the picker view and set the right value for the switch.
         setupViews()
         setupPickerView()
         setupHealthKitSwitch()
+        
         // Setup an observer to see if the view re-enters the foreground so that it can update the switch settings if the user manually changed the health kit permissions from the health app.
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
@@ -69,8 +85,6 @@ class AboutMeViewController: UIViewController {
     
     // Check if the back button has been tapped.
     @IBAction func backButtonTapped(_ sender: Any) {
-        // Update the values for the profile so they stay up to date.
-        setProfileValues()
         // Dismiss the view to go back to the profile view.
         self.dismiss(animated: true, completion: nil)
     }
@@ -79,6 +93,20 @@ class AboutMeViewController: UIViewController {
     @IBAction func screenTapped(_ sender: Any) {
         // Update the values, this is called here to dismiss the first responder as well.
         setProfileValues()
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        // Update the values for the profile so they stay up to date.
+        setProfileValues()
+        if ProfileController.sharedInstance.profile.firstLogin {
+            // If it's the first login present MyPlanStoryboard.
+            let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "MyPlanStoryboard")
+            self.present(viewController, animated: true, completion: nil)
+        } else {
+            // Dismiss the storyboard.
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // Updates the user profiles values
@@ -175,43 +203,6 @@ class AboutMeViewController: UIViewController {
         self.genderPicker.dataSource = self as UIPickerViewDataSource
         // Set the genderTextField to show the pickerView when tapped.
         genderTextField.inputView = genderPicker
-    }
-    
-    func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
-        
-        var color1: UIColor = .getHIITPrimaryOrange
-        var color2: UIColor = .getHIITAccentOrange
-        var placeholder: UIColor = UIColor()
-        
-        switch (primaryOrange, primaryBlue, accentOrange, accentBlue) {
-        case (true, true, false, false):
-            color1 = .getHIITPrimaryOrange
-            color2 = .getHIITPrimaryBlue
-        case (true, false, true, false):
-            color1 = .getHIITPrimaryOrange
-            color2 = .getHIITAccentOrange
-        case (false, true, false, true):
-            color1 = .getHIITPrimaryBlue
-            color2 = .getHIITAccentBlue
-        default:
-            print("That gradient didnt work")
-        }
-        
-        if verticalFlip == true {
-            placeholder = color1
-            color1 = color2
-            color2 = placeholder
-            placeholder = UIColor()
-        }
-        
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.colors = [color1.cgColor, color2.cgColor]
-        gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: view.frame.size.height)
-        
-        view.layer.insertSublayer(gradient, at: 0)
     }
 }
 

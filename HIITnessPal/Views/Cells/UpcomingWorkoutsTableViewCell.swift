@@ -10,14 +10,12 @@ import UIKit
 
 class UpcomingWorkoutsTableViewCell: UITableViewCell {
 
+    // Set IBOutlets
     @IBOutlet weak var workoutNameLabel: UILabel!
-    
     @IBOutlet weak var workout1Label: UILabel!
     @IBOutlet weak var workout2Label: UILabel!
     @IBOutlet weak var workout3Label: UILabel!
     @IBOutlet weak var workout4Label: UILabel!
-    
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var calorieCount: UILabel!
-    
 }

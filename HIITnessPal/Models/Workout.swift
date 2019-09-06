@@ -9,29 +9,29 @@
 import UIKit
 import CloudKit
 
-
-
 class Workout {
     
-    
-    var name: String
-    var description: String
-    var duration: Int
-    var rest: Int
-    let image: String
+    // Workout Variables and Constants
     let gif: String
+    var name: String
+    let image: String
+    var description: String
+    var rest: Int
+    var duration: Int
     
-    
-    init(name: String, description: String, duration: Int = 30, rest: Int = 10, image: String, gif: String) {
-        
-        self.name = name
-        self.description = description
-        self.duration = duration
-        self.rest = rest
-        self.image = image
+    // Workout Initializer
+    init(gif: String,
+         name: String,
+         image: String,
+         description: String,
+         rest: Int = 10,
+         duration: Int = 30) {
         self.gif = gif
-        
+        self.name = name
+        self.image = image
+        self.description = description
+        self.rest = rest
+        self.duration = duration
     }
-    
 }
 
