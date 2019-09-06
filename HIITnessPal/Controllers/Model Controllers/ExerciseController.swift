@@ -10,8 +10,10 @@ import UIKit
 
 class ExerciseController {
     
-    static let sharedExercises = ExerciseController()
+    // Singleton to access the exercises.
+    static let sharedInstance = ExerciseController()
     
+    // List of all specific exercises for each workout.
     var workouts: [Workout] {
         let sitUp = Workout(name: "Sit Up", description: "Lay down on your back and bring your legs in by bending your knees 90 degrees. Place your hands by your ears and extend your elbows out wide. From this start position engage your core by contracting your stomach muscles and raise up to a sitting position.", image: "SitUp2", gif: "situpGif")
         let lunges = Workout(name: "Lunges", description: "Go easy on the knees with this lunge. Stand with feet hip-width apart, engage core, and take a big step backward. Engage glutes as you bend front knee to lower body so back knee lightly taps floor while keeping upper body upright. Drive front heel into floor to return to starting position.", image: "Lunge2", gif: "lungesGif")
@@ -23,5 +25,4 @@ class ExerciseController {
         let pike = Workout(name: "Pike", description: "Assume a pushup position on the floor. Straighten your arms and place your hands shoulder-width apart. Lift up your hips so that your body forms an upside down V. Keep your legs and arms straight as you bend your elbows. Lower your upper body until the top of your head nearly touches the floor. Pause, and then push yourself back up.", image: "Pike1", gif: "dipGif")
         return [sitUp, lunges, squats, pushUps, climbers, pullUps, dips, pike]
     }
-    
 }
