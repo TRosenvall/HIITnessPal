@@ -9,17 +9,19 @@
 import Foundation
 import CloudKit
 
-
-
 class Workouts {
     
+    // Workouts Variables
     var name: String
-    var workouts: [Workout]
     var multiplier: Int
+    var workouts: [Workout]
     
-    init(name: String, workouts: [Workout], multiplier: Int) {
+    // Workouts Initializer
+    init(name: String,
+         multiplier: Int,
+         workouts: [Workout]) {
         self.name = name
-        self.workouts = workouts
         self.multiplier = multiplier
+        self.workouts = workouts
     }
 }

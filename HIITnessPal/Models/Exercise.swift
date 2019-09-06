@@ -9,21 +9,26 @@
 import UIKit
 import CloudKit
 
-
 class Exercise {
+    
+    // Exercise Variables and Constants
     let name: String
     let description: String
-    var duration: Timer
     let image: UIImage
     var rest: Timer
-    
-    
-    init(name: String, description: String, duration: Timer, image: UIImage, rest: Timer) {
+    var duration: Timer
+
+    // Exercise Profile Initializer
+    init(name: String,
+         description: String,
+         image: UIImage,
+         rest: Timer,
+         duration: Timer) {
         self.name = name
         self.description = description
-        self.duration = duration
         self.image = image
         self.rest = rest
+        self.duration = duration
     }
 }
 
