@@ -9,8 +9,6 @@
 import Foundation
 import CloudKit
 
-
-
 class Profile {
     // Profile Variables
     var name: String
