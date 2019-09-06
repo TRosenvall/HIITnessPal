@@ -10,6 +10,7 @@ import UIKit
 
 class SelectWorkoutTableViewCell: UITableViewCell {
 
+    // Set IBOutlets
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var borderView: UIView!

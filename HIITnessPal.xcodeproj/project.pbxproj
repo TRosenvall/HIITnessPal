@@ -212,8 +212,8 @@
 			children = (
 				16A2F0E123218B6300080F3C /* HIITnessPal.entitlements */,
 				16A2F0D923218AE100080F3C /* Models */,
-				16A2F0DA23218AE800080F3C /* Controllers */,
 				16A2F0DC23218AFD00080F3C /* Views */,
+				16A2F0DA23218AE800080F3C /* Controllers */,
 				16A2F0DD23218B2400080F3C /* Storyboards */,
 				16A2F0E623218C2B00080F3C /* Helpers + Extensions */,
 			);

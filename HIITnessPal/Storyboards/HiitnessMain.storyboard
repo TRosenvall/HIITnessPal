@@ -37,7 +37,7 @@
         <!--HiitnessDashboard-->
         <scene sceneID="uwC-Mb-UKQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Dashboard" id="SW5-0Q-Oqe" userLabel="HiitnessDashboard" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HiitnessDashboard" id="SW5-0Q-Oqe" userLabel="HiitnessDashboard" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="31m-du-9kH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jW-3i-KCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -47,7 +47,7 @@
         <!--MyHiitnessPlan-->
         <scene sceneID="5ji-SV-n3S">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyPlan" id="rsn-Tt-SbF" userLabel="MyHiitnessPlan" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyHiitnessPlan" id="rsn-Tt-SbF" userLabel="MyHiitnessPlan" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vd2-Dg-2Cg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSf-lV-Vn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,7 +57,7 @@
         <!--HiitnessWorkout-->
         <scene sceneID="o5n-fY-aw2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Workout" id="0Wk-HK-Jkp" userLabel="HiitnessWorkout" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HiitnessWorkout" id="0Wk-HK-Jkp" userLabel="HiitnessWorkout" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vG8-4o-qBU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdf-aS-fNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
         <!--HiitnessProfile-->
         <scene sceneID="W3q-9f-L5q">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="mLD-8j-3Yg" userLabel="HiitnessProfile" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HiitnessProfile" id="mLD-8j-3Yg" userLabel="HiitnessProfile" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="nc7-j9-7NO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxn-Ph-OQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>

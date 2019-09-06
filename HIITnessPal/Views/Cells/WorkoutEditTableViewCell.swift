@@ -10,21 +10,18 @@ import UIKit
 
 class WorkoutEditTableViewCell: UITableViewCell {
 
-    var workout: Workout? = nil
-    
+    // Set IBOutlets
     @IBOutlet weak var workoutView: UIView!
     @IBOutlet weak var restView: UIView!
-    
     @IBOutlet weak var workoutImageView: UIImageView!
     @IBOutlet weak var workoutTitle: UILabel!
-    
     @IBOutlet weak var workoutTimeLabel: UILabel!
     @IBOutlet weak var restTimeLabel: UILabel!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    // Set Variables
+    var workout: Workout? = nil
     
+    // Subtracts one second from the duration of the exercise listed and updates it's time labels.
     @IBAction func workoutTimeSubtractButtonTapped(_ sender: Any) {
         workout?.duration -= 1
         
@@ -36,6 +33,7 @@ class WorkoutEditTableViewCell: UITableViewCell {
         workoutTimeLabel.text = "\(minutes):\(seconds)"
     }
     
+    // Adds one second from the duration of the exercise listed and updates it's time labels.
     @IBAction func workoutTimeAddButtonTapped(_ sender: Any) {
         workout?.duration += 1
         
@@ -47,6 +45,7 @@ class WorkoutEditTableViewCell: UITableViewCell {
         workoutTimeLabel.text = "\(minutes):\(seconds)"
     }
     
+    // Subtracts one second from the duration of the rest listed and updates it's time labels.
     @IBAction func restTimeSubtractButtonTapped(_ sender: Any) {
         workout?.rest -= 1
         
@@ -58,6 +57,7 @@ class WorkoutEditTableViewCell: UITableViewCell {
         restTimeLabel.text = "\(minutes):\(seconds)"
     }
     
+    // Adds one second from the duration of the rest listed and updates it's time labels.
     @IBAction func restTimeAddButtonTapped(_ sender: Any) {
         workout?.rest += 1
         

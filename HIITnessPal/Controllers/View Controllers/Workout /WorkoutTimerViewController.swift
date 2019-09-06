@@ -39,6 +39,11 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         return countdownTimer
     }()
     
+    // Set the status bar to show as white.
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set this viewController as the timer's delegate.
