@@ -57,8 +57,18 @@ class AboutMeViewController: UIViewController {
         setupPickerView()
         setupHealthKitSwitch()
         
+        updateButtons()
+        
         // Setup an observer to see if the view re-enters the foreground so that it can update the switch settings if the user manually changed the health kit permissions from the health app.
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+        
+        // Setup an observer to see if healthKit is enabled so the apple watch functionality can start.
+        print("----")
+        print("Setup userToggledHealthKit")
+        NotificationCenter.default.post(name: NSNotification.Name("userToggledHealthKit"), object: profile.healthKitIsOn)
+        print("----")
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // The function that is called if the view enters the foreground from the background.
@@ -66,12 +76,11 @@ class AboutMeViewController: UIViewController {
         print("appeared")
         // Update the switch
         setupHealthKitSwitch()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Tapping the switch to turn on or off HealthKit functionality.
     @IBAction func healthKitSwitchTapped(_ sender: UISwitch) {
-        // Reverse the profile setting for whether or not HealthKit should be used.
-        profile.healthKitIsOn = !profile.healthKitIsOn
         // Call for authorization if it hasn't already been called. This will open a view to allow access to change the health settings from the Health app in this app.
         HealthKitController.sharedInstance.authorizeHeatlhKitInApp { (success) in
             if success{
@@ -81,6 +90,9 @@ class AboutMeViewController: UIViewController {
                 }
             }
         }
+        // Set the profile healthKitSetting to the switch's
+        profile.healthKitIsOn = healthKitSwitch.isOn
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Check if the back button has been tapped.
@@ -93,6 +105,7 @@ class AboutMeViewController: UIViewController {
     @IBAction func screenTapped(_ sender: Any) {
         // Update the values, this is called here to dismiss the first responder as well.
         setProfileValues()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -107,6 +120,7 @@ class AboutMeViewController: UIViewController {
             // Dismiss the storyboard.
             self.dismiss(animated: true, completion: nil)
         }
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Updates the user profiles values
@@ -134,6 +148,8 @@ class AboutMeViewController: UIViewController {
         } else {
             profile.weight = -1
         }
+        updateButtons()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Sets the position and functionality of the switch.
@@ -158,7 +174,9 @@ class AboutMeViewController: UIViewController {
             // Hide the prompt to manually allow access in the Health app and re-enable the switch
            
             healthKitSwitch.isEnabled = true
+            profile.healthKitIsOn = true
         }
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Setup the initial views when loaded
@@ -194,6 +212,7 @@ class AboutMeViewController: UIViewController {
         } else {
             genderTextField.text = "Female"
         }
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Setup the pickerView created above.
@@ -203,6 +222,21 @@ class AboutMeViewController: UIViewController {
         self.genderPicker.dataSource = self as UIPickerViewDataSource
         // Set the genderTextField to show the pickerView when tapped.
         genderTextField.inputView = genderPicker
+    }
+    
+    func updateButtons() {
+        guard let gender = genderTextField.text, let age = ageTextField.text, let weight = weightTextField.text, let name = nameTextField.text else {return}
+        if gender.isEmpty ||
+            age.isEmpty ||
+            weight.isEmpty ||
+            name.isEmpty {
+            nextButton.isEnabled = false
+            nextButton.layer.backgroundColor = UIColor.getHIITGray.cgColor
+        } else {
+            nextButton.isEnabled = true
+            nextButton.layer.backgroundColor = UIColor.getHIITAccentOrange.cgColor
+        }
+        
     }
 }
 
@@ -250,6 +284,8 @@ extension AboutMeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         default:
             genderTextField.text = "Error"
         }
+        updateButtons()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
 }
 

@@ -49,6 +49,7 @@ class RemindersViewController: UIViewController {
         // Set picker and reminder
         reminderToggle.isOn = ProfileController.sharedInstance.profile.remindersEnabled
         setReminderToggle()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func reminderToggleTapped(_ sender: UISwitch) {
@@ -64,6 +65,7 @@ class RemindersViewController: UIViewController {
             reminderIsOn = !reminderIsOn
         }
         setReminderToggle()
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -85,6 +87,7 @@ class RemindersViewController: UIViewController {
         reminderWasToggled = false
         // Dismiss the view controller.
         self.dismiss(animated: true, completion: nil)
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -100,6 +103,7 @@ class RemindersViewController: UIViewController {
             datePicker.isHidden = true
             datePicker.selectRow(0, inComponent: 0, animated: false)
         }
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     func getDayOfWeek() -> Int? {

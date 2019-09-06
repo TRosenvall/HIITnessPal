@@ -61,6 +61,18 @@
 		16A2F1662321B4E100080F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1652321B4E100080F3C /* Main.storyboard */; };
 		48E870433B75FE7831D151F4 /* Pods_HIITnessPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */; };
 		85C4F51023225EBA00E3C372 /* MyHiitnessPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */; };
+		85C4F51723228B7F00E3C372 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F51523228B7F00E3C372 /* Interface.storyboard */; };
+		85C4F51923228B8000E3C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F51823228B8000E3C372 /* Assets.xcassets */; };
+		85C4F52023228B8000E3C372 /* HIITnessPalWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 85C4F51F23228B8000E3C372 /* HIITnessPalWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		85C4F52523228B8000E3C372 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F52423228B8000E3C372 /* InterfaceController.swift */; };
+		85C4F52723228B8000E3C372 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F52623228B8000E3C372 /* ExtensionDelegate.swift */; };
+		85C4F52923228B8000E3C372 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F52823228B8000E3C372 /* NotificationController.swift */; };
+		85C4F52B23228B8100E3C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F52A23228B8100E3C372 /* Assets.xcassets */; };
+		85C4F53023228B8100E3C372 /* HIITnessPalWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 85C4F51323228B7E00E3C372 /* HIITnessPalWatch.app */; };
+		85C4F53923228D9E00E3C372 /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1342321A5E500080F3C /* HealthKitController.swift */; };
+		85C4F53C23228FC800E3C372 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4F53B23228FC800E3C372 /* HealthKit.framework */; };
+		85C4F53E23229EFD00E3C372 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1262321A5A400080F3C /* Profile.swift */; };
+		85C4F53F23229F0300E3C372 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F13A2321A99900080F3C /* ProfileController.swift */; };
 		901CA412A695EE06EA9D1DCB /* Pods_HIITnessPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */; };
 		E63445BD0E70B6A5A52EF395 /* Pods_HIITnessPalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,7 +92,46 @@
 			remoteGlobalIDString = 16A2F0A623218A1A00080F3C;
 			remoteInfo = HIITnessPal;
 		};
+		85C4F52123228B8000E3C372 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16A2F09F23218A1A00080F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85C4F51E23228B8000E3C372;
+			remoteInfo = "HIITnessPalWatch Extension";
+		};
+		85C4F52E23228B8100E3C372 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16A2F09F23218A1A00080F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85C4F51223228B7E00E3C372;
+			remoteInfo = HIITnessPalWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85C4F53623228B8100E3C372 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				85C4F52023228B8000E3C372 /* HIITnessPalWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C4F53823228B8100E3C372 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				85C4F53023228B8100E3C372 /* HIITnessPalWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		16A2F0A723218A1A00080F3C /* HIITnessPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITnessPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +196,19 @@
 		216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalUITests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalUITests/Pods-HIITnessPalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyHiitnessPlan.storyboard; sourceTree = "<group>"; };
+		85C4F51323228B7E00E3C372 /* HIITnessPalWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITnessPalWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C4F51623228B7F00E3C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		85C4F51823228B8000E3C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85C4F51A23228B8000E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C4F51F23228B8000E3C372 /* HIITnessPalWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HIITnessPalWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C4F52423228B8000E3C372 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		85C4F52623228B8000E3C372 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		85C4F52823228B8000E3C372 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		85C4F52A23228B8100E3C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85C4F52C23228B8100E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C4F52D23228B8100E3C372 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		85C4F53A23228FC800E3C372 /* HIITnessPalWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HIITnessPalWatch Extension.entitlements"; sourceTree = "<group>"; };
+		85C4F53B23228FC800E3C372 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPal.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal.release.xcconfig"; sourceTree = "<group>"; };
 		9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalTests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalTests/Pods-HIITnessPalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +245,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85C4F51C23228B8000E3C372 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F53C23228FC800E3C372 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -190,6 +262,8 @@
 				16A2F0A923218A1A00080F3C /* HIITnessPal */,
 				16A2F0BE23218A1A00080F3C /* HIITnessPalTests */,
 				16A2F0C923218A1B00080F3C /* HIITnessPalUITests */,
+				85C4F51423228B7F00E3C372 /* HIITnessPalWatch */,
+				85C4F52323228B8000E3C372 /* HIITnessPalWatch Extension */,
 				16A2F0A823218A1A00080F3C /* Products */,
 				16A2F0D823218A8D00080F3C /* Resources */,
 				16A2F0DE23218B6300080F3C /* Frameworks */,
@@ -203,6 +277,8 @@
 				16A2F0A723218A1A00080F3C /* HIITnessPal.app */,
 				16A2F0BB23218A1A00080F3C /* HIITnessPalTests.xctest */,
 				16A2F0C623218A1B00080F3C /* HIITnessPalUITests.xctest */,
+				85C4F51323228B7E00E3C372 /* HIITnessPalWatch.app */,
+				85C4F51F23228B8000E3C372 /* HIITnessPalWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +386,7 @@
 		16A2F0DE23218B6300080F3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85C4F53B23228FC800E3C372 /* HealthKit.framework */,
 				16A2F0E223218B7500080F3C /* CloudKit.framework */,
 				16A2F0DF23218B6300080F3C /* HealthKit.framework */,
 				9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */,
@@ -403,6 +480,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		85C4F51423228B7F00E3C372 /* HIITnessPalWatch */ = {
+			isa = PBXGroup;
+			children = (
+				85C4F51523228B7F00E3C372 /* Interface.storyboard */,
+				85C4F51823228B8000E3C372 /* Assets.xcassets */,
+				85C4F51A23228B8000E3C372 /* Info.plist */,
+			);
+			path = HIITnessPalWatch;
+			sourceTree = "<group>";
+		};
+		85C4F52323228B8000E3C372 /* HIITnessPalWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				85C4F53A23228FC800E3C372 /* HIITnessPalWatch Extension.entitlements */,
+				85C4F52423228B8000E3C372 /* InterfaceController.swift */,
+				85C4F52623228B8000E3C372 /* ExtensionDelegate.swift */,
+				85C4F52823228B8000E3C372 /* NotificationController.swift */,
+				85C4F52A23228B8100E3C372 /* Assets.xcassets */,
+				85C4F52C23228B8100E3C372 /* Info.plist */,
+				85C4F52D23228B8100E3C372 /* PushNotificationPayload.apns */,
+			);
+			path = "HIITnessPalWatch Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,10 +516,12 @@
 				16A2F0A423218A1A00080F3C /* Frameworks */,
 				16A2F0A523218A1A00080F3C /* Resources */,
 				D7BB255356F2ED0DF047D70C /* [CP] Embed Pods Frameworks */,
+				85C4F53823228B8100E3C372 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				85C4F52F23228B8100E3C372 /* PBXTargetDependency */,
 			);
 			name = HIITnessPal;
 			productName = HIITnessPal;
@@ -463,6 +566,40 @@
 			productReference = 16A2F0C623218A1B00080F3C /* HIITnessPalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		85C4F51223228B7E00E3C372 /* HIITnessPalWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85C4F53723228B8100E3C372 /* Build configuration list for PBXNativeTarget "HIITnessPalWatch" */;
+			buildPhases = (
+				85C4F51123228B7E00E3C372 /* Resources */,
+				85C4F53623228B8100E3C372 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85C4F52223228B8000E3C372 /* PBXTargetDependency */,
+			);
+			name = HIITnessPalWatch;
+			productName = HIITnessPalWatch;
+			productReference = 85C4F51323228B7E00E3C372 /* HIITnessPalWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		85C4F51E23228B8000E3C372 /* HIITnessPalWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85C4F53523228B8100E3C372 /* Build configuration list for PBXNativeTarget "HIITnessPalWatch Extension" */;
+			buildPhases = (
+				85C4F51B23228B8000E3C372 /* Sources */,
+				85C4F51C23228B8000E3C372 /* Frameworks */,
+				85C4F51D23228B8000E3C372 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HIITnessPalWatch Extension";
+			productName = "HIITnessPalWatch Extension";
+			productReference = 85C4F51F23228B8000E3C372 /* HIITnessPalWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -495,6 +632,20 @@
 						CreatedOnToolsVersion = 10.3;
 						TestTargetID = 16A2F0A623218A1A00080F3C;
 					};
+					85C4F51223228B7E00E3C372 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					85C4F51E23228B8000E3C372 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 16A2F0A223218A1A00080F3C /* Build configuration list for PBXProject "HIITnessPal" */;
@@ -513,6 +664,8 @@
 				16A2F0A623218A1A00080F3C /* HIITnessPal */,
 				16A2F0BA23218A1A00080F3C /* HIITnessPalTests */,
 				16A2F0C523218A1B00080F3C /* HIITnessPalUITests */,
+				85C4F51223228B7E00E3C372 /* HIITnessPalWatch */,
+				85C4F51E23228B8000E3C372 /* HIITnessPalWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -546,6 +699,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C4F51123228B7E00E3C372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F51923228B8000E3C372 /* Assets.xcassets in Resources */,
+				85C4F51723228B7F00E3C372 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C4F51D23228B8000E3C372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F52B23228B8100E3C372 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +870,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85C4F51B23228B8000E3C372 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F52923228B8000E3C372 /* NotificationController.swift in Sources */,
+				85C4F53E23229EFD00E3C372 /* Profile.swift in Sources */,
+				85C4F52723228B8000E3C372 /* ExtensionDelegate.swift in Sources */,
+				85C4F53923228D9E00E3C372 /* HealthKitController.swift in Sources */,
+				85C4F52523228B8000E3C372 /* InterfaceController.swift in Sources */,
+				85C4F53F23229F0300E3C372 /* ProfileController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -713,6 +896,16 @@
 			target = 16A2F0A623218A1A00080F3C /* HIITnessPal */;
 			targetProxy = 16A2F0C723218A1B00080F3C /* PBXContainerItemProxy */;
 		};
+		85C4F52223228B8000E3C372 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85C4F51E23228B8000E3C372 /* HIITnessPalWatch Extension */;
+			targetProxy = 85C4F52123228B8000E3C372 /* PBXContainerItemProxy */;
+		};
+		85C4F52F23228B8100E3C372 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85C4F51223228B7E00E3C372 /* HIITnessPalWatch */;
+			targetProxy = 85C4F52E23228B8100E3C372 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -722,6 +915,14 @@
 				16A2F0B423218A1A00080F3C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		85C4F51523228B7F00E3C372 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85C4F51623228B7F00E3C372 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -969,6 +1170,90 @@
 			};
 			name = Release;
 		};
+		85C4F53123228B8100E3C372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				IBSC_MODULE = HIITnessPalWatch_Extension;
+				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		85C4F53223228B8100E3C372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				IBSC_MODULE = HIITnessPalWatch_Extension;
+				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		85C4F53323228B8100E3C372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HIITnessPalWatch Extension/HIITnessPalWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				INFOPLIST_FILE = "HIITnessPalWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		85C4F53423228B8100E3C372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HIITnessPalWatch Extension/HIITnessPalWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				INFOPLIST_FILE = "HIITnessPalWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1004,6 +1289,24 @@
 			buildConfigurations = (
 				16A2F0D623218A1B00080F3C /* Debug */,
 				16A2F0D723218A1B00080F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85C4F53523228B8100E3C372 /* Build configuration list for PBXNativeTarget "HIITnessPalWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C4F53323228B8100E3C372 /* Debug */,
+				85C4F53423228B8100E3C372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85C4F53723228B8100E3C372 /* Build configuration list for PBXNativeTarget "HIITnessPalWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C4F53123228B8100E3C372 /* Debug */,
+				85C4F53223228B8100E3C372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

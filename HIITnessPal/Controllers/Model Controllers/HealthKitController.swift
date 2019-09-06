@@ -24,6 +24,8 @@ class HealthKitController {
     var timestampsCalorie: [Date] = []
     var timestampsHeartRate: [Date] = []
     var observerQuery: HKObserverQuery!
+    var averageHeartRate: Double = 0
+    var caloriesBurned: Double = 0
     
     // Units for HKObjects
     let weightUnit = HKUnit.pound()
@@ -133,5 +135,39 @@ class HealthKitController {
         }
         // Run the observer query.
         healthKitStore.execute(queryHeartRate)
+        observerQuery = queryHeartRate
     }
+    
+    func stopHeartRateObserver() {
+        healthKitStore.stop(observerQuery)
+    }
+    
+    func getCaloriesBurned(durationOfWorkoutInMinutes: Double) -> Double {
+        var calorieExpenditure: Double = 0.0
+        let averageHeartRate = HealthKitController.sharedInstance.averageHeartRate
+        let age = ProfileController.sharedInstance.profile.age
+        let weight = ProfileController.sharedInstance.profile.weight
+        let gender = ProfileController.sharedInstance.profile.gender
+        let minutes = durationOfWorkoutInMinutes
+        let weightInKilograms = weight * 0.453592
+        switch gender {
+        case 0:
+            let heartRatePortion: Double = (0.6309 * averageHeartRate)
+            let weightPortion: Double = (0.1988 * weightInKilograms)
+            let agePortion: Double = (0.2017 * Double(age))
+            let calorieExpenditurePerMinute = (-55.0969 + heartRatePortion + weightPortion + agePortion)/4.184
+            calorieExpenditure = calorieExpenditurePerMinute * minutes
+        case 1:
+            let heartRatePortion: Double = (0.4472 * averageHeartRate)
+            let weightPortion: Double =  (-0.1263 * weightInKilograms)
+            let agePortion: Double = (0.074 * Double(age))
+            let calorieExpenditurePerMinute = (-20.4022 + heartRatePortion + weightPortion + agePortion)/4.184
+            calorieExpenditure = calorieExpenditurePerMinute * minutes
+        default:
+            calorieExpenditure = 0.0
+        }
+        ProfileController.sharedInstance.saveToPersistentStore()
+        return calorieExpenditure
+    }
+    
 }

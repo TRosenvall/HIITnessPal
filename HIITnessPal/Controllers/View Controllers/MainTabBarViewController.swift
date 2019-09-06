@@ -53,6 +53,7 @@ class MainTabBarViewController: UITabBarController {
             let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "AboutMeStoryboard")
             self.present(viewController, animated: false, completion: nil)
+            ProfileController.sharedInstance.saveToPersistentStore()
         }
     }
     
