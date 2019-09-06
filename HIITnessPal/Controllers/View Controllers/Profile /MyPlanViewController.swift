@@ -10,36 +10,29 @@ import UIKit
 
 class MyPlanViewController: UIViewController {
 
+    // Setup IBOutlets
     @IBOutlet weak var titleView: UIView!
     
+    // Set the status bar to show as white.
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set the title views gradient and shadow.
         SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        // Do any additional setup after loading the view.
     }
     
+    // Dismiss the viewController when the back button is tapped.
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Dismiss the viewController when the done botton is tapped.
     @IBAction func doneButtonTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

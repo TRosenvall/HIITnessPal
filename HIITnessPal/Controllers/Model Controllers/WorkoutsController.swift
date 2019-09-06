@@ -18,7 +18,7 @@ class WorkoutsController {
     
     // Function to create a new workout.
     func createWorkout (name: String, workouts: [Workout], multiplier: Int) {
-        let workouts = Workouts(name: name, workouts: workouts, multiplier: multiplier)
+        let workouts = Workouts(name: name, multiplier: multiplier, workouts: workouts)
         totalWorkouts.append(workouts)
     }
     

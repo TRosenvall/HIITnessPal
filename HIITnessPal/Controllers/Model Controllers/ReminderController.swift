@@ -28,7 +28,7 @@ class ReminderController: ReminderScheduler {
     // Function used to create a reminder.
     func createReminder(reminder: Reminder, fireDate: Date, enabled: Bool) {
         // Set a reminder
-        let reminder = Reminder(fireDate: fireDate, enabled: enabled)
+        let reminder = Reminder(enabled: enabled, fireDate: fireDate)
         // Add the reminder to the given list.
     ReminderController.sharedInstance.reminders.append(reminder)
     }

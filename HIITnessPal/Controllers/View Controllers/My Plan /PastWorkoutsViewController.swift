@@ -10,20 +10,23 @@ import UIKit
 
 class PastWorkoutsViewController: UIViewController {
     
+    // Outlets for the PastWorkoutsViewController
+    @IBOutlet weak var titleView: UIView!
+    
+    // Set the status bar to show as white.
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
-    @IBOutlet weak var titleView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-          SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
+        // Set the title view's gradient and shadows.
+        SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        // Do any additional setup after loading the view.
     }
     
+    // Switch back to the UpcominWorkoutsViewController. These two views were embedded in a navigation controller in order to retain the TabBarController at the bottom. Because of this, this view must be popped instead of dismissed.
     @IBAction func upcomingButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
@@ -31,19 +34,27 @@ class PastWorkoutsViewController: UIViewController {
 }
 
 extension PastWorkoutsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // Set to the total number of workouts
+    // TODO: - Needs to be updated to that last used completed workouts.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // TODO: - Add a completedWorkouts array to the workouts controller.
         return WorkoutsController.sharedInstance.totalWorkouts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Set the cell to be a PastWorkoutsTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "pastWorkoutCell", for: indexPath) as! PastWorkoutsTableViewCell
+        
+        // Pull the correct workout from the given index.
+        // TODO: - Pull from the to-be-added completeWorkouts array.
         let workouts = WorkoutsController.sharedInstance.totalWorkouts[indexPath.row]
+        
+        // Setup the cell label.
         cell.workoutNameLabel.text = workouts.name
+        
+        // Return the cell.
         return cell
     }
-    
-    
-    
-    
-    
 }
