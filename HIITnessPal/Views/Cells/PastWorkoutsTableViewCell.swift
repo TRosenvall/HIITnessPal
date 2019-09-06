@@ -10,6 +10,7 @@ import UIKit
 
 class PastWorkoutsTableViewCell: UITableViewCell {
 
+    // Set IBOutlets
     @IBOutlet weak var calorieLabel: UILabel!
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var workoutCompleteImageView: UIImageView!
