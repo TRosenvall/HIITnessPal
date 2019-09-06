@@ -71,6 +71,20 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
                 }
             }
         }
+        HealthKitController.sharedInstance.heartRates = []
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        var totalHeartRate: Double = 0
+        for heartRate in HealthKitController.sharedInstance.heartRates {
+            totalHeartRate += heartRate
+        }
+        HealthKitController.sharedInstance.averageHeartRate = totalHeartRate/Double(HealthKitController.sharedInstance.heartRates.count)
+        // To help the calculations work, this is garbage data.
+        if HealthKitController.sharedInstance.averageHeartRate.isNaN {
+            HealthKitController.sharedInstance.averageHeartRate = 120
+        }
     }
     
     // MARK: - Actions

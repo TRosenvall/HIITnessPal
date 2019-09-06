@@ -41,6 +41,15 @@ class WorkoutCompleteViewController: UIViewController {
         WorkoutTimerViewController.totalTime = 0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        averageHeartRate.text = "\(HealthKitController.sharedInstance.averageHeartRate)"
+        let minutes = time/60
+        let calories = HealthKitController.sharedInstance.getCaloriesBurned(durationOfWorkoutInMinutes: minutes)
+        calorieCount.text = "\(calories)"
+        
+    }
+    
     // Dismiss the current view controller and it's parent view controller.
     @IBAction func backButtonTapped(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)

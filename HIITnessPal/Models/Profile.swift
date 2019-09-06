@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-class Profile {
+class Profile: Codable {
     // Profile Variables
     var name: String
     var firstLogin: Bool

@@ -37,11 +37,9 @@ class MyPlanViewController: UIViewController {
             progressView.isHidden = false
             doneButton.isHidden = false
             preferenceLabel.isHidden = false
-            backButton.isHidden = true
         } else {
             progressView.isHidden = true
             preferenceLabel.isHidden = true
-            backButton.isHidden = false
             doneButton.setTitle("Save", for: .normal)
         }
         
@@ -49,6 +47,7 @@ class MyPlanViewController: UIViewController {
         idealPlanSlider.value = Float(ProfileController.sharedInstance.profile.idealPlan)
         workoutsInAWeekLabel.text = "\(Int(idealPlanSlider.value + 1)) Workouts Every Week"
         minutesLabel.text = "\(Int((idealPlanSlider.value*5) + 15)) Minutes"
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Dismiss the viewController when the back button is tapped.
@@ -66,6 +65,7 @@ class MyPlanViewController: UIViewController {
         } else {
             self.dismiss(animated: true, completion: nil)
         }
+        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func idealPlanSliderValueChanged(_ sender: UISlider) {

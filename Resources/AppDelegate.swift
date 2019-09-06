@@ -14,9 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        ProfileController.sharedInstance.loadFromPersistentStore()
         
         let yesAction = UNNotificationAction(identifier: "accept_identifier", title: "accept")
         let noAction = UNNotificationAction(identifier: "delcline_identifier", title: "decline")
@@ -29,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tempWorkoutMultiplier: Int = 4
         
         WorkoutsController.sharedInstance.createWorkout(name: "Super Sweat", workouts: tempWorkouts, multiplier: tempWorkoutMultiplier)
+        
+        
         
         return true
     }
