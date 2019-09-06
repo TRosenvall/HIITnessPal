@@ -18,7 +18,10 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var ageTextField: PasteDisabledTextField!
     @IBOutlet weak var weightTextField: PasteDisabledTextField!
     @IBOutlet weak var titleView: UIView!
-    
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     // Set the user profile and create a Picker View for the gender
     let profile = ProfileController.sharedInstance.profile
@@ -35,6 +38,19 @@ class AboutMeViewController: UIViewController {
         SetGradient.setGradient(view: titleView, mainColor: .getHIITPrimaryOrange, secondColor: .getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        // Set the progressView, backButton, nextButton, and preferenceLabel for first time users
+        if ProfileController.sharedInstance.profile.firstLogin {
+            progressView.isHidden = false
+            nextButton.isHidden = false
+            preferenceLabel.isHidden = false
+            backButton.isHidden = true
+        } else {
+            progressView.isHidden = true
+            preferenceLabel.isHidden = true
+            backButton.isHidden = false
+            nextButton.setTitle("Save", for: .normal)
+        }
         
         // Call the functions to setup the views, the picker view and set the right value for the switch.
         setupViews()
@@ -69,8 +85,6 @@ class AboutMeViewController: UIViewController {
     
     // Check if the back button has been tapped.
     @IBAction func backButtonTapped(_ sender: Any) {
-        // Update the values for the profile so they stay up to date.
-        setProfileValues()
         // Dismiss the view to go back to the profile view.
         self.dismiss(animated: true, completion: nil)
     }
@@ -79,6 +93,20 @@ class AboutMeViewController: UIViewController {
     @IBAction func screenTapped(_ sender: Any) {
         // Update the values, this is called here to dismiss the first responder as well.
         setProfileValues()
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        // Update the values for the profile so they stay up to date.
+        setProfileValues()
+        if ProfileController.sharedInstance.profile.firstLogin {
+            // If it's the first login present MyPlanStoryboard.
+            let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "MyPlanStoryboard")
+            self.present(viewController, animated: true, completion: nil)
+        } else {
+            // Dismiss the storyboard.
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // Updates the user profiles values

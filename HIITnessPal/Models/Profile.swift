@@ -20,6 +20,7 @@ class Profile {
     var goal: Int
     var gender: Int
     var idealPlan: Int
+    var reminderDate: Int
     var exercisesThisWeek: Int
     var completedExercises: Int
     var totalTimeExercising: Int
@@ -39,7 +40,8 @@ class Profile {
          age: Int = -1,
          goal: Int = 0,
          gender: Int = -1,
-         idealPlan: Int = 0,
+         idealPlan: Int = 3,
+         reminderDate: Int = 0,
          exercisesThisWeek: Int = 0,
          completedExercises: Int = 0,
          totalTimeExericising: Int = 0,
@@ -58,6 +60,7 @@ class Profile {
         self.goal = goal
         self.gender = gender
         self.idealPlan = idealPlan
+        self.reminderDate = reminderDate
         self.exercisesThisWeek = exercisesThisWeek
         self.completedExercises = completedExercises
         self.totalTimeExercising = totalTimeExericising

@@ -46,6 +46,17 @@ class MainTabBarViewController: UITabBarController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // If it's the first login, open up the AboutMeViewController to gather information.
+        if ProfileController.sharedInstance.profile.firstLogin {
+            let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "AboutMeStoryboard")
+            self.present(viewController, animated: false, completion: nil)
+        }
+    }
+    
+    
     // Function used to set the appropriate fonts and sizes for the tab bar item titles.
     func setTabBarItems(){
         // Unwrap the font and size for the titles.

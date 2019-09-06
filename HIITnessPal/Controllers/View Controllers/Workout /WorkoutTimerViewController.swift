@@ -117,7 +117,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
                 if finished {
                     DispatchQueue.main.async {
                         // Update the theme of the timer to the blue timer if the current exercise is a rest.
-                        if self.exercises[self.currentExercise].0 == "Rest" {
+                        if self.exercises[self.currentExercise % self.exercises.count].0 == "Rest" {
                             self.setBlue()
                         } else {
                             // Set back to orange when the current exercise is not a rest.
