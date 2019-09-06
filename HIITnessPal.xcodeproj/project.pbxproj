@@ -1,0 +1,1014 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16A2F0AB23218A1A00080F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0AA23218A1A00080F3C /* AppDelegate.swift */; };
+		16A2F0B223218A1A00080F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0B123218A1A00080F3C /* Assets.xcassets */; };
+		16A2F0B523218A1A00080F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0B323218A1A00080F3C /* LaunchScreen.storyboard */; };
+		16A2F0C023218A1A00080F3C /* HIITnessPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0BF23218A1A00080F3C /* HIITnessPalTests.swift */; };
+		16A2F0CB23218A1B00080F3C /* HIITnessPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0CA23218A1B00080F3C /* HIITnessPalUITests.swift */; };
+		16A2F0E023218B6300080F3C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A2F0DF23218B6300080F3C /* HealthKit.framework */; };
+		16A2F0E323218B7500080F3C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A2F0E223218B7500080F3C /* CloudKit.framework */; };
+		16A2F0E823218CE900080F3C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0E723218CE900080F3C /* ColorExtension.swift */; };
+		16A2F0EA23218D1700080F3C /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0E923218D1700080F3C /* SetGradient.swift */; };
+		16A2F0EC23218D4700080F3C /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0EB23218D4700080F3C /* NotificationHelper.swift */; };
+		16A2F0F02321951700080F3C /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0EF2321951700080F3C /* ColorAssets.xcassets */; };
+		16A2F0F223219ED500080F3C /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0F123219ED500080F3C /* nunito */; };
+		16A2F0F423219FD700080F3C /* GifAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0F323219FD700080F3C /* GifAssets.xcassets */; };
+		16A2F0F82321A33C00080F3C /* CreateNewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */; };
+		16A2F0FA2321A34100080F3C /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0F92321A34100080F3C /* DescriptionViewController.swift */; };
+		16A2F0FC2321A34900080F3C /* PastWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */; };
+		16A2F0FE2321A35000080F3C /* SelectWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0FD2321A35000080F3C /* SelectWorkoutViewController.swift */; };
+		16A2F1002321A35700080F3C /* UpcomingWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0FF2321A35700080F3C /* UpcomingWorkoutsViewController.swift */; };
+		16A2F1062321A38000080F3C /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1022321A38000080F3C /* AboutMeViewController.swift */; };
+		16A2F1072321A38000080F3C /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1032321A38000080F3C /* MyPlanViewController.swift */; };
+		16A2F1082321A38000080F3C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1042321A38000080F3C /* ProfileViewController.swift */; };
+		16A2F1092321A38000080F3C /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1052321A38000080F3C /* RemindersViewController.swift */; };
+		16A2F10F2321A3B700080F3C /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */; };
+		16A2F1102321A3B700080F3C /* WorkoutEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */; };
+		16A2F1112321A3B700080F3C /* ChooseWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10D2321A3B700080F3C /* ChooseWorkoutViewController.swift */; };
+		16A2F1122321A3B700080F3C /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10E2321A3B700080F3C /* WorkoutCompleteViewController.swift */; };
+		16A2F1152321A41400080F3C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1142321A41400080F3C /* DashboardViewController.swift */; };
+		16A2F1172321A41900080F3C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1162321A41900080F3C /* MainTabBarViewController.swift */; };
+		16A2F11C2321A43B00080F3C /* PastWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1182321A43B00080F3C /* PastWorkoutsTableViewCell.swift */; };
+		16A2F11D2321A43B00080F3C /* SelectWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1192321A43B00080F3C /* SelectWorkoutTableViewCell.swift */; };
+		16A2F11E2321A43B00080F3C /* UpcomingWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F11A2321A43B00080F3C /* UpcomingWorkoutsTableViewCell.swift */; };
+		16A2F11F2321A43B00080F3C /* CreateWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F11B2321A43B00080F3C /* CreateWorkoutTableViewCell.swift */; };
+		16A2F1232321A44200080F3C /* WorkoutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1202321A44200080F3C /* WorkoutListTableViewCell.swift */; };
+		16A2F1242321A44200080F3C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1212321A44200080F3C /* WorkoutTableViewCell.swift */; };
+		16A2F1252321A44200080F3C /* WorkoutEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1222321A44200080F3C /* WorkoutEditTableViewCell.swift */; };
+		16A2F1272321A5A400080F3C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1262321A5A400080F3C /* Profile.swift */; };
+		16A2F1292321A5AA00080F3C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1282321A5AA00080F3C /* Exercise.swift */; };
+		16A2F12B2321A5B000080F3C /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F12A2321A5B000080F3C /* Reminders.swift */; };
+		16A2F12D2321A5B500080F3C /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F12C2321A5B500080F3C /* Workout.swift */; };
+		16A2F12F2321A5BA00080F3C /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F12E2321A5BA00080F3C /* Workouts.swift */; };
+		16A2F1312321A5D600080F3C /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1302321A5D600080F3C /* WorkoutsController.swift */; };
+		16A2F1332321A5E100080F3C /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1322321A5E000080F3C /* ReminderController.swift */; };
+		16A2F1352321A5E500080F3C /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1342321A5E500080F3C /* HealthKitController.swift */; };
+		16A2F1392321A97300080F3C /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1382321A97300080F3C /* ExerciseController.swift */; };
+		16A2F13B2321A99A00080F3C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F13A2321A99900080F3C /* ProfileController.swift */; };
+		16A2F13D2321A9AD00080F3C /* PasteDisabledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F13C2321A9AD00080F3C /* PasteDisabledTextField.swift */; };
+		16A2F13F2321AB0000080F3C /* WorkoutTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F13E2321AAFF00080F3C /* WorkoutTimerViewController.swift */; };
+		16A2F1412321AB2B00080F3C /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1402321AB2B00080F3C /* CountdownTimer.swift */; };
+		16A2F14D2321B2E300080F3C /* HiitnessDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */; };
+		16A2F14F2321B2EF00080F3C /* HiitnessWorkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */; };
+		16A2F1592321B36F00080F3C /* HiitnessProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */; };
+		16A2F1642321B46300080F3C /* MyHiitnessPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */; };
+		16A2F1662321B4E100080F3C /* HiitnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */; };
+		48E870433B75FE7831D151F4 /* Pods_HIITnessPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */; };
+		901CA412A695EE06EA9D1DCB /* Pods_HIITnessPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */; };
+		E63445BD0E70B6A5A52EF395 /* Pods_HIITnessPalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16A2F0BC23218A1A00080F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16A2F09F23218A1A00080F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16A2F0A623218A1A00080F3C;
+			remoteInfo = HIITnessPal;
+		};
+		16A2F0C723218A1B00080F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16A2F09F23218A1A00080F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16A2F0A623218A1A00080F3C;
+			remoteInfo = HIITnessPal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16A2F0A723218A1A00080F3C /* HIITnessPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITnessPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A2F0AA23218A1A00080F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16A2F0B123218A1A00080F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16A2F0B423218A1A00080F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16A2F0B623218A1A00080F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A2F0BB23218A1A00080F3C /* HIITnessPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIITnessPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A2F0BF23218A1A00080F3C /* HIITnessPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITnessPalTests.swift; sourceTree = "<group>"; };
+		16A2F0C123218A1A00080F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A2F0C623218A1B00080F3C /* HIITnessPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIITnessPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A2F0CA23218A1B00080F3C /* HIITnessPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITnessPalUITests.swift; sourceTree = "<group>"; };
+		16A2F0CC23218A1B00080F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A2F0DF23218B6300080F3C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		16A2F0E123218B6300080F3C /* HIITnessPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HIITnessPal.entitlements; sourceTree = "<group>"; };
+		16A2F0E223218B7500080F3C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		16A2F0E723218CE900080F3C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		16A2F0E923218D1700080F3C /* SetGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradient.swift; sourceTree = "<group>"; };
+		16A2F0EB23218D4700080F3C /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		16A2F0EF2321951700080F3C /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		16A2F0F123219ED500080F3C /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
+		16A2F0F323219FD700080F3C /* GifAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GifAssets.xcassets; sourceTree = "<group>"; };
+		16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewWorkoutViewController.swift; sourceTree = "<group>"; };
+		16A2F0F92321A34100080F3C /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
+		16A2F0FD2321A35000080F3C /* SelectWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWorkoutViewController.swift; sourceTree = "<group>"; };
+		16A2F0FF2321A35700080F3C /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
+		16A2F1022321A38000080F3C /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		16A2F1032321A38000080F3C /* MyPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
+		16A2F1042321A38000080F3C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		16A2F1052321A38000080F3C /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
+		16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditViewController.swift; sourceTree = "<group>"; };
+		16A2F10D2321A3B700080F3C /* ChooseWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseWorkoutViewController.swift; sourceTree = "<group>"; };
+		16A2F10E2321A3B700080F3C /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
+		16A2F1142321A41400080F3C /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		16A2F1162321A41900080F3C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		16A2F1182321A43B00080F3C /* PastWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F1192321A43B00080F3C /* SelectWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F11A2321A43B00080F3C /* UpcomingWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F11B2321A43B00080F3C /* CreateWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F1202321A44200080F3C /* WorkoutListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F1212321A44200080F3C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F1222321A44200080F3C /* WorkoutEditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditTableViewCell.swift; sourceTree = "<group>"; };
+		16A2F1262321A5A400080F3C /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		16A2F1282321A5AA00080F3C /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		16A2F12A2321A5B000080F3C /* Reminders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
+		16A2F12C2321A5B500080F3C /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		16A2F12E2321A5BA00080F3C /* Workouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
+		16A2F1302321A5D600080F3C /* WorkoutsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
+		16A2F1322321A5E000080F3C /* ReminderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderController.swift; sourceTree = "<group>"; };
+		16A2F1342321A5E500080F3C /* HealthKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitController.swift; sourceTree = "<group>"; };
+		16A2F1382321A97300080F3C /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		16A2F13A2321A99900080F3C /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileController.swift; path = "../../../../GET-HIIT/Get-HIIT/Controllers/Helpers+Extensions/ProfileController.swift"; sourceTree = "<group>"; };
+		16A2F13C2321A9AD00080F3C /* PasteDisabledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteDisabledTextField.swift; sourceTree = "<group>"; };
+		16A2F13E2321AAFF00080F3C /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTimerViewController.swift; sourceTree = "<group>"; };
+		16A2F1402321AB2B00080F3C /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessDashboard.storyboard; sourceTree = "<group>"; };
+		16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessWorkout.storyboard; sourceTree = "<group>"; };
+		16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessProfile.storyboard; sourceTree = "<group>"; };
+		16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHiitnessPlan.storyboard; sourceTree = "<group>"; };
+		16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HiitnessMain.storyboard; sourceTree = "<group>"; };
+		216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalUITests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalUITests/Pods-HIITnessPalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPal.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal.release.xcconfig"; sourceTree = "<group>"; };
+		9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalTests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalTests/Pods-HIITnessPalTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8E09F19FD76BF2B1B3E9996 /* Pods-HIITnessPalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalTests.debug.xcconfig"; path = "Target Support Files/Pods-HIITnessPalTests/Pods-HIITnessPalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0CDFA611105E6E96BE687C4 /* Pods-HIITnessPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPal.debug.xcconfig"; path = "Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal.debug.xcconfig"; sourceTree = "<group>"; };
+		F355295729543EC3DFA1F61B /* Pods-HIITnessPalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalUITests.debug.xcconfig"; path = "Target Support Files/Pods-HIITnessPalUITests/Pods-HIITnessPalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16A2F0A423218A1A00080F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A2F0E023218B6300080F3C /* HealthKit.framework in Frameworks */,
+				16A2F0E323218B7500080F3C /* CloudKit.framework in Frameworks */,
+				901CA412A695EE06EA9D1DCB /* Pods_HIITnessPal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0B823218A1A00080F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E870433B75FE7831D151F4 /* Pods_HIITnessPalTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0C323218A1B00080F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63445BD0E70B6A5A52EF395 /* Pods_HIITnessPalUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16A2F09E23218A1A00080F3C = {
+			isa = PBXGroup;
+			children = (
+				16A2F0A923218A1A00080F3C /* HIITnessPal */,
+				16A2F0BE23218A1A00080F3C /* HIITnessPalTests */,
+				16A2F0C923218A1B00080F3C /* HIITnessPalUITests */,
+				16A2F0A823218A1A00080F3C /* Products */,
+				16A2F0D823218A8D00080F3C /* Resources */,
+				16A2F0DE23218B6300080F3C /* Frameworks */,
+				3EC0F07D28C8C3530DF9CCDB /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		16A2F0A823218A1A00080F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0A723218A1A00080F3C /* HIITnessPal.app */,
+				16A2F0BB23218A1A00080F3C /* HIITnessPalTests.xctest */,
+				16A2F0C623218A1B00080F3C /* HIITnessPalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16A2F0A923218A1A00080F3C /* HIITnessPal */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0E123218B6300080F3C /* HIITnessPal.entitlements */,
+				16A2F0D923218AE100080F3C /* Models */,
+				16A2F0DA23218AE800080F3C /* Controllers */,
+				16A2F0DC23218AFD00080F3C /* Views */,
+				16A2F0DD23218B2400080F3C /* Storyboards */,
+				16A2F0E623218C2B00080F3C /* Helpers + Extensions */,
+			);
+			path = HIITnessPal;
+			sourceTree = "<group>";
+		};
+		16A2F0BE23218A1A00080F3C /* HIITnessPalTests */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0BF23218A1A00080F3C /* HIITnessPalTests.swift */,
+				16A2F0C123218A1A00080F3C /* Info.plist */,
+			);
+			path = HIITnessPalTests;
+			sourceTree = "<group>";
+		};
+		16A2F0C923218A1B00080F3C /* HIITnessPalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0CA23218A1B00080F3C /* HIITnessPalUITests.swift */,
+				16A2F0CC23218A1B00080F3C /* Info.plist */,
+			);
+			path = HIITnessPalUITests;
+			sourceTree = "<group>";
+		};
+		16A2F0D823218A8D00080F3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0AA23218A1A00080F3C /* AppDelegate.swift */,
+				16A2F0B123218A1A00080F3C /* Assets.xcassets */,
+				16A2F0F123219ED500080F3C /* nunito */,
+				16A2F0EF2321951700080F3C /* ColorAssets.xcassets */,
+				16A2F0F323219FD700080F3C /* GifAssets.xcassets */,
+				16A2F0B323218A1A00080F3C /* LaunchScreen.storyboard */,
+				16A2F0B623218A1A00080F3C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16A2F0D923218AE100080F3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F1262321A5A400080F3C /* Profile.swift */,
+				16A2F1282321A5AA00080F3C /* Exercise.swift */,
+				16A2F12A2321A5B000080F3C /* Reminders.swift */,
+				16A2F12E2321A5BA00080F3C /* Workouts.swift */,
+				16A2F12C2321A5B500080F3C /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16A2F0DA23218AE800080F3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0E523218C1500080F3C /* Model Controllers */,
+				16A2F0E423218C0100080F3C /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		16A2F0DB23218AF400080F3C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F11B2321A43B00080F3C /* CreateWorkoutTableViewCell.swift */,
+				16A2F1182321A43B00080F3C /* PastWorkoutsTableViewCell.swift */,
+				16A2F1192321A43B00080F3C /* SelectWorkoutTableViewCell.swift */,
+				16A2F11A2321A43B00080F3C /* UpcomingWorkoutsTableViewCell.swift */,
+				16A2F1222321A44200080F3C /* WorkoutEditTableViewCell.swift */,
+				16A2F1202321A44200080F3C /* WorkoutListTableViewCell.swift */,
+				16A2F1212321A44200080F3C /* WorkoutTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		16A2F0DC23218AFD00080F3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0DB23218AF400080F3C /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16A2F0DD23218B2400080F3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F14C2321B2E300080F3C /* HiitnessDashboard.storyboard */,
+				16A2F14E2321B2EF00080F3C /* HiitnessWorkout.storyboard */,
+				16A2F1652321B4E100080F3C /* HiitnessMain.storyboard */,
+				16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */,
+				16A2F1632321B46300080F3C /* MyHiitnessPlan.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		16A2F0DE23218B6300080F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0E223218B7500080F3C /* CloudKit.framework */,
+				16A2F0DF23218B6300080F3C /* HealthKit.framework */,
+				9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */,
+				F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */,
+				530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16A2F0E423218C0100080F3C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F1162321A41900080F3C /* MainTabBarViewController.swift */,
+				16A2F1142321A41400080F3C /* DashboardViewController.swift */,
+				16A2F1012321A36F00080F3C /* My Plan  */,
+				16A2F10A2321A39200080F3C /* Profile  */,
+				16A2F1132321A3BC00080F3C /* Workout  */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		16A2F0E523218C1500080F3C /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F13A2321A99900080F3C /* ProfileController.swift */,
+				16A2F1382321A97300080F3C /* ExerciseController.swift */,
+				16A2F1302321A5D600080F3C /* WorkoutsController.swift */,
+				16A2F1402321AB2B00080F3C /* CountdownTimer.swift */,
+				16A2F1322321A5E000080F3C /* ReminderController.swift */,
+				16A2F1342321A5E500080F3C /* HealthKitController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		16A2F0E623218C2B00080F3C /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F13C2321A9AD00080F3C /* PasteDisabledTextField.swift */,
+				16A2F0E723218CE900080F3C /* ColorExtension.swift */,
+				16A2F0E923218D1700080F3C /* SetGradient.swift */,
+				16A2F0EB23218D4700080F3C /* NotificationHelper.swift */,
+			);
+			path = "Helpers + Extensions";
+			sourceTree = "<group>";
+		};
+		16A2F1012321A36F00080F3C /* My Plan  */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */,
+				16A2F0F92321A34100080F3C /* DescriptionViewController.swift */,
+				16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */,
+				16A2F0FD2321A35000080F3C /* SelectWorkoutViewController.swift */,
+				16A2F0FF2321A35700080F3C /* UpcomingWorkoutsViewController.swift */,
+			);
+			path = "My Plan ";
+			sourceTree = "<group>";
+		};
+		16A2F10A2321A39200080F3C /* Profile  */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F1022321A38000080F3C /* AboutMeViewController.swift */,
+				16A2F1032321A38000080F3C /* MyPlanViewController.swift */,
+				16A2F1042321A38000080F3C /* ProfileViewController.swift */,
+				16A2F1052321A38000080F3C /* RemindersViewController.swift */,
+			);
+			path = "Profile ";
+			sourceTree = "<group>";
+		};
+		16A2F1132321A3BC00080F3C /* Workout  */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F10D2321A3B700080F3C /* ChooseWorkoutViewController.swift */,
+				16A2F13E2321AAFF00080F3C /* WorkoutTimerViewController.swift */,
+				16A2F10E2321A3B700080F3C /* WorkoutCompleteViewController.swift */,
+				16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */,
+				16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */,
+			);
+			path = "Workout ";
+			sourceTree = "<group>";
+		};
+		3EC0F07D28C8C3530DF9CCDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0CDFA611105E6E96BE687C4 /* Pods-HIITnessPal.debug.xcconfig */,
+				93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */,
+				C8E09F19FD76BF2B1B3E9996 /* Pods-HIITnessPalTests.debug.xcconfig */,
+				C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */,
+				F355295729543EC3DFA1F61B /* Pods-HIITnessPalUITests.debug.xcconfig */,
+				216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16A2F0A623218A1A00080F3C /* HIITnessPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16A2F0CF23218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPal" */;
+			buildPhases = (
+				A3253FA960C019818AF2EAA9 /* [CP] Check Pods Manifest.lock */,
+				16A2F0A323218A1A00080F3C /* Sources */,
+				16A2F0A423218A1A00080F3C /* Frameworks */,
+				16A2F0A523218A1A00080F3C /* Resources */,
+				D7BB255356F2ED0DF047D70C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HIITnessPal;
+			productName = HIITnessPal;
+			productReference = 16A2F0A723218A1A00080F3C /* HIITnessPal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16A2F0BA23218A1A00080F3C /* HIITnessPalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16A2F0D223218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPalTests" */;
+			buildPhases = (
+				893C881A5B78EEFF23E489A8 /* [CP] Check Pods Manifest.lock */,
+				16A2F0B723218A1A00080F3C /* Sources */,
+				16A2F0B823218A1A00080F3C /* Frameworks */,
+				16A2F0B923218A1A00080F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16A2F0BD23218A1A00080F3C /* PBXTargetDependency */,
+			);
+			name = HIITnessPalTests;
+			productName = HIITnessPalTests;
+			productReference = 16A2F0BB23218A1A00080F3C /* HIITnessPalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16A2F0C523218A1B00080F3C /* HIITnessPalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16A2F0D523218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPalUITests" */;
+			buildPhases = (
+				799814CFFC9E9E8D0ED45E19 /* [CP] Check Pods Manifest.lock */,
+				16A2F0C223218A1B00080F3C /* Sources */,
+				16A2F0C323218A1B00080F3C /* Frameworks */,
+				16A2F0C423218A1B00080F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16A2F0C823218A1B00080F3C /* PBXTargetDependency */,
+			);
+			name = HIITnessPalUITests;
+			productName = HIITnessPalUITests;
+			productReference = 16A2F0C623218A1B00080F3C /* HIITnessPalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16A2F09F23218A1A00080F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Leah Cluff";
+				TargetAttributes = {
+					16A2F0A623218A1A00080F3C = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					16A2F0BA23218A1A00080F3C = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 16A2F0A623218A1A00080F3C;
+					};
+					16A2F0C523218A1B00080F3C = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 16A2F0A623218A1A00080F3C;
+					};
+				};
+			};
+			buildConfigurationList = 16A2F0A223218A1A00080F3C /* Build configuration list for PBXProject "HIITnessPal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16A2F09E23218A1A00080F3C;
+			productRefGroup = 16A2F0A823218A1A00080F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16A2F0A623218A1A00080F3C /* HIITnessPal */,
+				16A2F0BA23218A1A00080F3C /* HIITnessPalTests */,
+				16A2F0C523218A1B00080F3C /* HIITnessPalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16A2F0A523218A1A00080F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A2F1642321B46300080F3C /* MyHiitnessPlan.storyboard in Resources */,
+				16A2F1662321B4E100080F3C /* HiitnessMain.storyboard in Resources */,
+				16A2F14F2321B2EF00080F3C /* HiitnessWorkout.storyboard in Resources */,
+				16A2F0F223219ED500080F3C /* nunito in Resources */,
+				16A2F1592321B36F00080F3C /* HiitnessProfile.storyboard in Resources */,
+				16A2F14D2321B2E300080F3C /* HiitnessDashboard.storyboard in Resources */,
+				16A2F0B523218A1A00080F3C /* LaunchScreen.storyboard in Resources */,
+				16A2F0B223218A1A00080F3C /* Assets.xcassets in Resources */,
+				16A2F0F423219FD700080F3C /* GifAssets.xcassets in Resources */,
+				16A2F0F02321951700080F3C /* ColorAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0B923218A1A00080F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0C423218A1B00080F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		799814CFFC9E9E8D0ED45E19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITnessPalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		893C881A5B78EEFF23E489A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITnessPalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3253FA960C019818AF2EAA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HIITnessPal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BB255356F2ED0DF047D70C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16A2F0A323218A1A00080F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A2F0AB23218A1A00080F3C /* AppDelegate.swift in Sources */,
+				16A2F0F82321A33C00080F3C /* CreateNewWorkoutViewController.swift in Sources */,
+				16A2F1352321A5E500080F3C /* HealthKitController.swift in Sources */,
+				16A2F1412321AB2B00080F3C /* CountdownTimer.swift in Sources */,
+				16A2F1272321A5A400080F3C /* Profile.swift in Sources */,
+				16A2F12D2321A5B500080F3C /* Workout.swift in Sources */,
+				16A2F13B2321A99A00080F3C /* ProfileController.swift in Sources */,
+				16A2F1002321A35700080F3C /* UpcomingWorkoutsViewController.swift in Sources */,
+				16A2F1172321A41900080F3C /* MainTabBarViewController.swift in Sources */,
+				16A2F1292321A5AA00080F3C /* Exercise.swift in Sources */,
+				16A2F0E823218CE900080F3C /* ColorExtension.swift in Sources */,
+				16A2F1332321A5E100080F3C /* ReminderController.swift in Sources */,
+				16A2F13F2321AB0000080F3C /* WorkoutTimerViewController.swift in Sources */,
+				16A2F1082321A38000080F3C /* ProfileViewController.swift in Sources */,
+				16A2F13D2321A9AD00080F3C /* PasteDisabledTextField.swift in Sources */,
+				16A2F0FC2321A34900080F3C /* PastWorkoutsViewController.swift in Sources */,
+				16A2F1072321A38000080F3C /* MyPlanViewController.swift in Sources */,
+				16A2F1152321A41400080F3C /* DashboardViewController.swift in Sources */,
+				16A2F1122321A3B700080F3C /* WorkoutCompleteViewController.swift in Sources */,
+				16A2F12B2321A5B000080F3C /* Reminders.swift in Sources */,
+				16A2F0EC23218D4700080F3C /* NotificationHelper.swift in Sources */,
+				16A2F1102321A3B700080F3C /* WorkoutEditViewController.swift in Sources */,
+				16A2F1252321A44200080F3C /* WorkoutEditTableViewCell.swift in Sources */,
+				16A2F10F2321A3B700080F3C /* WorkoutMainViewController.swift in Sources */,
+				16A2F0FE2321A35000080F3C /* SelectWorkoutViewController.swift in Sources */,
+				16A2F12F2321A5BA00080F3C /* Workouts.swift in Sources */,
+				16A2F11F2321A43B00080F3C /* CreateWorkoutTableViewCell.swift in Sources */,
+				16A2F0FA2321A34100080F3C /* DescriptionViewController.swift in Sources */,
+				16A2F11D2321A43B00080F3C /* SelectWorkoutTableViewCell.swift in Sources */,
+				16A2F11E2321A43B00080F3C /* UpcomingWorkoutsTableViewCell.swift in Sources */,
+				16A2F1112321A3B700080F3C /* ChooseWorkoutViewController.swift in Sources */,
+				16A2F0EA23218D1700080F3C /* SetGradient.swift in Sources */,
+				16A2F1062321A38000080F3C /* AboutMeViewController.swift in Sources */,
+				16A2F1092321A38000080F3C /* RemindersViewController.swift in Sources */,
+				16A2F11C2321A43B00080F3C /* PastWorkoutsTableViewCell.swift in Sources */,
+				16A2F1242321A44200080F3C /* WorkoutTableViewCell.swift in Sources */,
+				16A2F1392321A97300080F3C /* ExerciseController.swift in Sources */,
+				16A2F1232321A44200080F3C /* WorkoutListTableViewCell.swift in Sources */,
+				16A2F1312321A5D600080F3C /* WorkoutsController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0B723218A1A00080F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A2F0C023218A1A00080F3C /* HIITnessPalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16A2F0C223218A1B00080F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A2F0CB23218A1B00080F3C /* HIITnessPalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16A2F0BD23218A1A00080F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16A2F0A623218A1A00080F3C /* HIITnessPal */;
+			targetProxy = 16A2F0BC23218A1A00080F3C /* PBXContainerItemProxy */;
+		};
+		16A2F0C823218A1B00080F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16A2F0A623218A1A00080F3C /* HIITnessPal */;
+			targetProxy = 16A2F0C723218A1B00080F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16A2F0B323218A1A00080F3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16A2F0B423218A1A00080F3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16A2F0CD23218A1B00080F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16A2F0CE23218A1B00080F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16A2F0D023218A1B00080F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CDFA611105E6E96BE687C4 /* Pods-HIITnessPal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16A2F0D123218A1B00080F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16A2F0D323218A1B00080F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E09F19FD76BF2B1B3E9996 /* Pods-HIITnessPalTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = HIITnessPalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HIITnessPal.app/HIITnessPal";
+			};
+			name = Debug;
+		};
+		16A2F0D423218A1B00080F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = HIITnessPalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HIITnessPal.app/HIITnessPal";
+			};
+			name = Release;
+		};
+		16A2F0D623218A1B00080F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F355295729543EC3DFA1F61B /* Pods-HIITnessPalUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = HIITnessPalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HIITnessPal;
+			};
+			name = Debug;
+		};
+		16A2F0D723218A1B00080F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				INFOPLIST_FILE = HIITnessPalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.HIITnessPalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HIITnessPal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16A2F0A223218A1A00080F3C /* Build configuration list for PBXProject "HIITnessPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16A2F0CD23218A1B00080F3C /* Debug */,
+				16A2F0CE23218A1B00080F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16A2F0CF23218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16A2F0D023218A1B00080F3C /* Debug */,
+				16A2F0D123218A1B00080F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16A2F0D223218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16A2F0D323218A1B00080F3C /* Debug */,
+				16A2F0D423218A1B00080F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16A2F0D523218A1B00080F3C /* Build configuration list for PBXNativeTarget "HIITnessPalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16A2F0D623218A1B00080F3C /* Debug */,
+				16A2F0D723218A1B00080F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16A2F09F23218A1A00080F3C /* Project object */;
+}

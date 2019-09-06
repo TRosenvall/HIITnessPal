@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwy-Rw-fU0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="QYh-G4-P3c">
+            <objects>
+                <viewController id="zwy-Rw-fU0" customClass="DashboardViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05u-09-Eil">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Lq-Ht-PLz">
+                                <rect key="frame" x="98" y="449" width="152.5" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6y-2r-PX6">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Avg. Heart Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkl-Om-d5D">
+                                        <rect key="frame" x="0.0" y="38" width="152.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" name="Get-HIITBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HQP-Cx-bt1">
+                                <rect key="frame" x="98" y="365" width="163" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v36-CE-jFT">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="FuX-hp-6hU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Workout Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUw-EE-IBp">
+                                        <rect key="frame" x="0.0" y="39" width="163" height="18"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" name="Get-HIITBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jUb-mY-OqC">
+                                <rect key="frame" x="33" y="349" width="49" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lKi-eY-Zfa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calories Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-tw-zKw">
+                                <rect key="frame" x="33" y="269" width="49" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ndh-kH-6xL"/>
+                                    <constraint firstAttribute="width" constant="49" id="yTk-8u-vGL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart Rate Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-pA-sEY">
+                                <rect key="frame" x="33" y="426" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vmw-F4-eQ9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-17-tkh">
+                                <rect key="frame" x="20" y="531" width="374" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-pz-hR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="mU7-ig-MFX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LI-Ls-ddD">
+                                        <rect key="frame" x="53" y="0.0" width="321" height="50"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bwp-XF-Eoy">
+                                <rect key="frame" x="98" y="287" width="102" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pum-nN-Y2e">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="34"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWq-s3-UIe">
+                                        <rect key="frame" x="0.0" y="39" width="102" height="18"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" name="Get-HIITBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetReady" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-qi-Fj0">
+                                <rect key="frame" x="115" y="92" width="184" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="kdv-gE-E1z"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-wA-ebc" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="582" width="374" height="243"/>
+                                <color key="backgroundColor" name="Get-HIITWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-T6-fN0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-AS-oW2">
+                                        <rect key="frame" x="0.0" y="37" width="414" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="uAJ-0x-DlO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="28"/>
+                                        <color key="textColor" name="Get-HIITWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Niy-AS-oW2" firstAttribute="centerX" secondItem="HIB-T6-fN0" secondAttribute="centerX" id="0Bg-75-oOs"/>
+                                    <constraint firstItem="Niy-AS-oW2" firstAttribute="top" secondItem="HIB-T6-fN0" secondAttribute="top" constant="37" id="9r6-bx-3RV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Niy-AS-oW2" secondAttribute="bottom" constant="4" id="e6M-bd-7Q4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Get-HIITWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HIB-T6-fN0" secondAttribute="bottom" constant="806" id="00K-i4-jAd"/>
+                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="trailing" constant="15" id="77V-Je-xC5"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="5Lq-Ht-PLz" secondAttribute="bottom" constant="26" id="8eR-20-7EO"/>
+                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="HQP-Cx-bt1" secondAttribute="trailing" constant="153" id="8xw-Ev-hHh"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" id="9qt-px-d24"/>
+                            <constraint firstItem="yEI-eA-QYP" firstAttribute="bottom" secondItem="xRI-wA-ebc" secondAttribute="bottom" constant="37" id="Bn1-LW-GYZ"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="trailing" secondItem="xRI-wA-ebc" secondAttribute="trailing" id="HeW-cE-aAE"/>
+                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="leading" secondItem="5Lq-Ht-PLz" secondAttribute="leading" id="Hin-3b-9OD"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="leading" secondItem="jUb-mY-OqC" secondAttribute="leading" id="Iqz-gv-3HT"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="leading" secondItem="dmJ-tw-zKw" secondAttribute="trailing" constant="16" id="K8W-3y-yGc"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="trailing" secondItem="jUb-mY-OqC" secondAttribute="trailing" id="NGG-WO-O4i"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="top" secondItem="M6O-qi-Fj0" secondAttribute="bottom" constant="8" symbolic="YES" id="NMs-Ec-6Bm"/>
+                            <constraint firstItem="jUb-mY-OqC" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="leading" id="NdU-qn-jfE"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="xRI-wA-ebc" secondAttribute="leading" id="Xo5-JF-QcF"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="leading" secondItem="dmJ-tw-zKw" secondAttribute="trailing" constant="33" id="ZXD-uZ-1lP"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="top" secondItem="yEI-eA-QYP" secondAttribute="top" constant="48" id="atG-Jb-CJO"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="leading" secondItem="HQP-Cx-bt1" secondAttribute="leading" id="fDW-mM-apS"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="leading" secondItem="05u-09-Eil" secondAttribute="leading" id="fWR-CU-h2P"/>
+                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" constant="582" id="hIt-im-hBX"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="centerX" secondItem="SiA-17-tkh" secondAttribute="centerX" id="hzN-AQ-mHx"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="top" secondItem="yEI-eA-QYP" secondAttribute="top" constant="225" id="lE2-hn-lkT"/>
+                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="top" secondItem="bwp-XF-Eoy" secondAttribute="bottom" constant="21" id="laH-68-zez"/>
+                            <constraint firstItem="Ure-pA-sEY" firstAttribute="top" secondItem="jUb-mY-OqC" secondAttribute="bottom" constant="27" id="mut-4R-At8"/>
+                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="SiA-17-tkh" secondAttribute="bottom" constant="1" id="n8g-2u-6vo"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="Ure-pA-sEY" secondAttribute="bottom" constant="55" id="oeA-Sv-O38"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="trailing" secondItem="05u-09-Eil" secondAttribute="trailingMargin" id="sEd-rh-LTh"/>
+                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" constant="449" id="stA-ul-HJr"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="centerX" secondItem="M6O-qi-Fj0" secondAttribute="centerX" id="veN-rh-w3b"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="05u-09-Eil" secondAttribute="leadingMargin" id="wL2-jl-PG1"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="33" id="xKT-QS-DFV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yEI-eA-QYP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="DashboardUnselectedIcon" selectedImage="DashboardSelectedIcon" id="FWX-Xa-MIz"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dashboardGradient" destination="HIB-T6-fN0" id="twU-PM-edA"/>
+                        <outlet property="lineChart" destination="xRI-wA-ebc" id="FFs-l8-RFy"/>
+                        <outlet property="weeklyAvgHeartRateLabel" destination="L6y-2r-PX6" id="Pkp-YR-2rk"/>
+                        <outlet property="weeklyCalLabel" destination="pum-nN-Y2e" id="H94-UB-hCS"/>
+                        <outlet property="weeklyWorkoutMinLabel" destination="v36-CE-jFT" id="l3w-Oa-Z8C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htq-YY-OiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="-685.04464285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Calories Icon" width="500" height="500"/>
+        <image name="DashboardSelectedIcon" width="50" height="50"/>
+        <image name="DashboardUnselectedIcon" width="50" height="50"/>
+        <image name="GetReady" width="184.5" height="208"/>
+        <image name="Heart Rate Icon" width="500" height="500"/>
+        <image name="Workout Time Icon" width="500" height="500"/>
+        <namedColor name="Get-HIITBlack">
+            <color red="0.17254901960784313" green="0.16470588235294117" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Get-HIITWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
