@@ -46,7 +46,7 @@ class DashboardViewController: UIViewController {
         self.minutes.append(minutes2)
         // Run the function to update the chart.
         updateDataChart()
-    } 
+    }
     
     // Function to update the chart.
     func updateDataChart() {

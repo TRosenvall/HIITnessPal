@@ -143,11 +143,12 @@ class HealthKitController {
     }
     
     func getCaloriesBurned(durationOfWorkoutInMinutes: Double) -> Double {
+        guard let profile = ProfileController.sharedInstance.profile else {return 0}
         var calorieExpenditure: Double = 0.0
         let averageHeartRate = HealthKitController.sharedInstance.averageHeartRate
-        let age = ProfileController.sharedInstance.profile.age
-        let weight = ProfileController.sharedInstance.profile.weight
-        let gender = ProfileController.sharedInstance.profile.gender
+        let age = profile.age
+        let weight = profile.weight
+        let gender = profile.gender
         let minutes = durationOfWorkoutInMinutes
         let weightInKilograms = weight * 0.453592
         switch gender {
@@ -166,7 +167,6 @@ class HealthKitController {
         default:
             calorieExpenditure = 0.0
         }
-        ProfileController.sharedInstance.saveToPersistentStore()
         return calorieExpenditure
     }
     

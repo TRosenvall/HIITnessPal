@@ -11,6 +11,8 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
+        guard let profile = ProfileController.sharedInstance.profile else {return}
+        
         HealthKitController.sharedInstance.authorizeHeatlhKitInApp { (success) in
             print(success)
         }
@@ -20,7 +22,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(setupHeartRateObserver), name: NSNotification.Name("userToggledHealthKit"), object: nil)
         print("----")
         
-        if ProfileController.sharedInstance.profile.healthKitIsOn {
+        if profile.healthKitIsOn {
             HealthKitController.sharedInstance.heartRateObserver { (heartRate) in
                 print("Heart Rate Retrieved")
                 NotificationCenter.default.post(name: NSNotification.Name("sendHeartRate"), object: heartRate)

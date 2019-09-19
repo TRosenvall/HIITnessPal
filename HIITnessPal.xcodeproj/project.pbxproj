@@ -447,9 +447,9 @@
 		16A2F10A2321A39200080F3C /* Profile  */ = {
 			isa = PBXGroup;
 			children = (
+				16A2F1042321A38000080F3C /* ProfileViewController.swift */,
 				16A2F1022321A38000080F3C /* AboutMeViewController.swift */,
 				16A2F1032321A38000080F3C /* MyPlanViewController.swift */,
-				16A2F1042321A38000080F3C /* ProfileViewController.swift */,
 				16A2F1052321A38000080F3C /* RemindersViewController.swift */,
 			);
 			path = "Profile ";
@@ -458,11 +458,11 @@
 		16A2F1132321A3BC00080F3C /* Workout  */ = {
 			isa = PBXGroup;
 			children = (
+				16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */,
 				16A2F10D2321A3B700080F3C /* ChooseWorkoutViewController.swift */,
 				16A2F13E2321AAFF00080F3C /* WorkoutTimerViewController.swift */,
-				16A2F10E2321A3B700080F3C /* WorkoutCompleteViewController.swift */,
 				16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */,
-				16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */,
+				16A2F10E2321A3B700080F3C /* WorkoutCompleteViewController.swift */,
 			);
 			path = "Workout ";
 			sourceTree = "<group>";
@@ -1057,10 +1057,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1077,10 +1077,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1179,7 +1179,7 @@
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				IBSC_MODULE = HIITnessPalWatch_Extension;
 				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1198,7 +1198,7 @@
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				IBSC_MODULE = HIITnessPalWatch_Extension;
 				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1221,7 +1221,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1244,7 +1244,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TAR.HIITnessPal.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

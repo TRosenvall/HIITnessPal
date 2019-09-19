@@ -17,6 +17,8 @@ class RemindersViewController: UIViewController {
     @IBOutlet weak var remindMeLabel: UILabel!
     @IBOutlet weak var titleView: UIView!
     
+    let profile = ProfileController.sharedInstance.profile
+    
     // Set a reminder landing pad.
     fileprivate var reminder: Reminder? {
         didSet {
@@ -47,9 +49,9 @@ class RemindersViewController: UIViewController {
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
         // Set picker and reminder
-        reminderToggle.isOn = ProfileController.sharedInstance.profile.remindersEnabled
+        guard let profile = ProfileController.sharedInstance.profile else {return}
+        reminderToggle.isOn = profile.remindersEnabled
         setReminderToggle()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func reminderToggleTapped(_ sender: UISwitch) {
@@ -65,11 +67,11 @@ class RemindersViewController: UIViewController {
             reminderIsOn = !reminderIsOn
         }
         setReminderToggle()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        if ProfileController.sharedInstance.profile.remindersEnabled {
+        guard let profile = profile else {return}
+        if profile.remindersEnabled {
             // Unwrap the reminder landing pad and reminderDate.
             let date = reminderDate
             if let reminder = reminder {
@@ -81,13 +83,12 @@ class RemindersViewController: UIViewController {
             }
         }
         if reminderWasToggled {
-            ProfileController.sharedInstance.profile.remindersEnabled = !ProfileController.sharedInstance.profile.remindersEnabled
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: !profile.remindersEnabled, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         }
-        ProfileController.sharedInstance.profile.reminderDate = reminderInt
+        ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: reminderInt, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         reminderWasToggled = false
         // Dismiss the view controller.
         self.dismiss(animated: true, completion: nil)
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -96,14 +97,14 @@ class RemindersViewController: UIViewController {
     }
     
     func setReminderToggle() {
+        guard let profile = profile else {return}
         if reminderToggle.isOn {
             datePicker.isHidden = false
-            datePicker.selectRow(ProfileController.sharedInstance.profile.reminderDate - 1, inComponent: 0, animated: false)
+            datePicker.selectRow(profile.reminderDate - 1, inComponent: 0, animated: false)
         } else {
             datePicker.isHidden = true
             datePicker.selectRow(0, inComponent: 0, animated: false)
         }
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     func getDayOfWeek() -> Int? {

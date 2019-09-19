@@ -40,7 +40,8 @@ class AboutMeViewController: UIViewController {
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
         // Set the progressView, backButton, nextButton, and preferenceLabel for first time users
-        if ProfileController.sharedInstance.profile.firstLogin {
+        guard let profile = profile else {return}
+        if profile.firstLogin {
             progressView.isHidden = false
             nextButton.isHidden = false
             preferenceLabel.isHidden = false
@@ -68,19 +69,17 @@ class AboutMeViewController: UIViewController {
         print("Setup userToggledHealthKit")
         NotificationCenter.default.post(name: NSNotification.Name("userToggledHealthKit"), object: profile.healthKitIsOn)
         print("----")
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // The function that is called if the view enters the foreground from the background.
     @objc func willEnterForeground() {
-        print("appeared")
         // Update the switch
         setupHealthKitSwitch()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Tapping the switch to turn on or off HealthKit functionality.
     @IBAction func healthKitSwitchTapped(_ sender: UISwitch) {
+        guard let profile = profile else {return}
         // Call for authorization if it hasn't already been called. This will open a view to allow access to change the health settings from the Health app in this app.
         HealthKitController.sharedInstance.authorizeHeatlhKitInApp { (success) in
             if success{
@@ -91,8 +90,8 @@ class AboutMeViewController: UIViewController {
             }
         }
         // Set the profile healthKitSetting to the switch's
-        profile.healthKitIsOn = healthKitSwitch.isOn
-        ProfileController.sharedInstance.saveToPersistentStore()
+        ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: healthKitSwitch.isOn, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
+        
     }
     
     // Check if the back button has been tapped.
@@ -105,13 +104,13 @@ class AboutMeViewController: UIViewController {
     @IBAction func screenTapped(_ sender: Any) {
         // Update the values, this is called here to dismiss the first responder as well.
         setProfileValues()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         // Update the values for the profile so they stay up to date.
         setProfileValues()
-        if ProfileController.sharedInstance.profile.firstLogin {
+        guard let profile = profile else {return}
+        if profile.firstLogin {
             // If it's the first login present MyPlanStoryboard.
             let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "MyPlanStoryboard")
@@ -120,7 +119,6 @@ class AboutMeViewController: UIViewController {
             // Dismiss the storyboard.
             self.dismiss(animated: true, completion: nil)
         }
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Updates the user profiles values
@@ -130,30 +128,31 @@ class AboutMeViewController: UIViewController {
         genderTextField.endEditing(true)
         ageTextField.resignFirstResponder()
         weightTextField.resignFirstResponder()
+        guard let profile = profile else {return}
         // Update the name, age and weight of user.
         if let name = nameTextField.text {
-            profile.name = name
+            ProfileController.sharedInstance.profile(profile: profile, name: name, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         } else {
-            profile.name = ""
+            ProfileController.sharedInstance.profile(profile: profile, name: "", firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         }
         // Unwraps the age and sets it to an integer value if possible. If this fails, the age is set to 0.
         if let age = ageTextField.text, let ageInt = Int(age) {
-            profile.age = ageInt
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: ageInt, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         } else {
-            profile.age = -1
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: -1, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         }
         // Upwraps the age and sets it to a double value if possible. If this fails, the weight is set to 0.0.
         if let weight = weightTextField.text, let weightDouble = Double(weight) {
-            profile.weight = weightDouble
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: weightDouble, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         } else {
-            profile.weight = -1
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: -1, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         }
         updateButtons()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Sets the position and functionality of the switch.
     func setupHealthKitSwitch() {
+        guard let profile = profile else {return}
         // Pulls the HealthKit objects for weight, heartRate, and activeEnergyBurned
         guard let weight = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass) else
         {return}
@@ -168,19 +167,19 @@ class AboutMeViewController: UIViewController {
             // Turn off the switch, disable the switch, update the profile to be marked as not using healthKit, and show the prompt to maunally allow access in the Health app
             healthKitSwitch.isOn = false
             healthKitSwitch.isEnabled = false
-            profile.healthKitIsOn = false
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: healthKitSwitch.isOn, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
            
         } else {
             // Hide the prompt to manually allow access in the Health app and re-enable the switch
            
             healthKitSwitch.isEnabled = true
-            profile.healthKitIsOn = true
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: healthKitSwitch.isEnabled, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         }
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Setup the initial views when loaded
     func setupViews() {
+        guard let profile = profile else {return}
         // Set the textField delegates to be self.
         nameTextField.delegate = self
         genderTextField.delegate = self
@@ -212,7 +211,6 @@ class AboutMeViewController: UIViewController {
         } else {
             genderTextField.text = "Female"
         }
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
     
     // Setup the pickerView created above.
@@ -268,6 +266,7 @@ extension AboutMeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     // If the row is selected for one of the three cases above
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard let profile = profile else {return}
         // Update the genderTextField
         switch row {
         case 0:
@@ -275,17 +274,16 @@ extension AboutMeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             genderTextField.text = "Male"
             // Update the profile gender
-            profile.gender = 0
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: 0, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         case 2:
             genderTextField.text = "Female"
             // Update the profile gender
-            profile.gender = 1
+            ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: 1, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: nil)
         // Should never be called.
         default:
             genderTextField.text = "Error"
         }
         updateButtons()
-        ProfileController.sharedInstance.saveToPersistentStore()
     }
 }
 
