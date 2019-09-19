@@ -24,6 +24,9 @@ class MainTabBarViewController: UITabBarController {
         mainTabBar.layer.backgroundColor = UIColor.getHIITWhite.cgColor
         // Call the function to set the fonts for the tab bar titles.
         setTabBarItems()
+        
+        let profile = Profile()
+        ProfileController.sharedInstance.profile = profile
     }
     
     override func viewWillLayoutSubviews() {
@@ -49,11 +52,11 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // If it's the first login, open up the AboutMeViewController to gather information.
-        if ProfileController.sharedInstance.profile.firstLogin {
+        guard let profile = ProfileController.sharedInstance.profile else {return}
+        if profile.firstLogin {
             let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "AboutMeStoryboard")
             self.present(viewController, animated: false, completion: nil)
-            ProfileController.sharedInstance.saveToPersistentStore()
         }
     }
     

@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var titleView: UIView!
     
     // Source Of Truth
-    var profile = ProfileController.sharedInstance.profile
+    lazy var profile = ProfileController.sharedInstance.profile
     
     // Set the status bar to show as white.
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -37,15 +37,19 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // When the viewController displays, fall the function to setup the views and laybles.
         setupViews()
     }
-    
+
     func setupViews() {
+        guard let profile = profile else {return}
         // Set the outlet numbers
         let numberOfExercises = profile.completedExercises
         let numberOfMinutes = profile.totalTimeExercising
-        let numberOfCalories = profile.caloriesBurnedThisWeek.reduce(0, +)
+        var calorieBurn: [Double] = []
+        for calorie in profile.caloriesBurnedThisWeek{
+            calorieBurn.append(calorie.calorieCount)
+        }
+        let numberOfCalories = calorieBurn.reduce(0, +)
         let numberOfExercisesThisWeek = profile.exercisesThisWeek
         // Set the proper labels
         numberOfExercisesLabel.text = "\(numberOfExercises)"
@@ -56,6 +60,7 @@ class ProfileViewController: UIViewController {
         } else {
             numberOfCaloriesBurnedLabel.text = "\(numberOfCalories)"
         }
+        calorieBurn = []
         // Set the correct number of exercises this week from the profile.
         numberOfExercisesThisWeekLabel.text = "\(numberOfExercisesThisWeek)"
     }

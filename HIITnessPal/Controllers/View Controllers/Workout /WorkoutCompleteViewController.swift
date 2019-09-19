@@ -16,6 +16,8 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var totalTime: UILabel!
     @IBOutlet weak var averageHeartRate: UILabel!
     
+    let profile = ProfileController.sharedInstance.profile
+    
     // Variable - Time placeholder.
     var time: Double = 0
     
@@ -46,8 +48,8 @@ class WorkoutCompleteViewController: UIViewController {
         averageHeartRate.text = "\(HealthKitController.sharedInstance.averageHeartRate)"
         let minutes = time/60
         let calories = HealthKitController.sharedInstance.getCaloriesBurned(durationOfWorkoutInMinutes: minutes)
-        calorieCount.text = "\(calories)"
-        
+        let calorieDisplay = Double(Int(calories*100))/100
+        calorieCount.text = "\(calorieDisplay)"
     }
     
     // Dismiss the current view controller and it's parent view controller.
@@ -58,6 +60,15 @@ class WorkoutCompleteViewController: UIViewController {
     // Dismiss the current view controller and it's parent view controller.
     // TODO: - Make saving do something.
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let profile = profile else {return}
+        guard let calorie = calorieCount.text else {return}
+        guard let calorieDouble = Double(calorie) else {return}
+        ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: [Exercises(exercise: 1, daysElapsed: 0)], completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: [Calories(calorieCount: calorieDouble, daysElapsed: 0)])
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        
+        
+        
+        
+        
     }
 }

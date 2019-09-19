@@ -9,6 +9,21 @@
 import Foundation
 import CloudKit
 
+struct Exercises: Codable {
+    var exercise: Int
+    var daysElapsed: Int
+}
+
+struct Weights: Codable {
+    var weight: Double
+    var daysElapsed: Int
+}
+
+struct Calories: Codable {
+    var calorieCount: Double
+    var daysElapsed: Int
+}
+
 class Profile: Codable {
     // Profile Variables
     var name: String
@@ -21,15 +36,16 @@ class Profile: Codable {
     var gender: Int
     var idealPlan: Int
     var reminderDate: Int
-    var exercisesThisWeek: Int
+    var exercisesThisWeek: [Exercises]
     var completedExercises: Int
     var totalTimeExercising: Int
     var weight: Double
-    var averageHeartRate: Double
     var caloriesBurnedToday: Double
     var totalCaloriesBurned: Double
-    var weightsForWeeklyPlot: [Double]
-    var caloriesBurnedThisWeek: [Double]
+    var averageHeartRate: [Double]
+    var weightsForWeeklyPlot: [Weights]
+    var caloriesBurnedThisWeek: [Calories]
+    var lastDate: Date
     
     // Profile Initializer
     init(name: String = "",
@@ -42,15 +58,16 @@ class Profile: Codable {
          gender: Int = -1,
          idealPlan: Int = 3,
          reminderDate: Int = 0,
-         exercisesThisWeek: Int = 0,
+         exercisesThisWeek: [Exercises] = [],
          completedExercises: Int = 0,
          totalTimeExericising: Int = 0,
          weight: Double = -1,
-         averageHeartRate: Double = 0.0,
          caloriesBurnedToday: Double = 0.0,
          totalCaloriesBurned: Double = 0.0,
-         weightsForWeeklyPlot: [Double] = [],
-         caloriesBurnedThisWeek: [Double] = []) {
+         averageHeartRate: [Double] = [],
+         weightsForWeeklyPlot: [Weights] = [],
+         caloriesBurnedThisWeek: [Calories] = [],
+         lastDate: Date = Date()) {
         self.name = name
         self.firstLogin = firstLogin
         self.healthKitIsOn = healthKitIsOn
@@ -70,5 +87,6 @@ class Profile: Codable {
         self.totalCaloriesBurned = totalCaloriesBurned
         self.weightsForWeeklyPlot = weightsForWeeklyPlot
         self.caloriesBurnedThisWeek = caloriesBurnedThisWeek
+        self.lastDate = lastDate
     }
 }
