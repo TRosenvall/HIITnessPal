@@ -35,15 +35,39 @@ class DashboardViewController: UIViewController {
         
         // Set the chart description text
         lineChart.chartDescription?.text = ""
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let profile = ProfileController.sharedInstance.profile else {return}
+        var calories: Double = 0.0
+        var time: Int = 0
+        var heartRate: Double = 0.0
+        for cal in profile.caloriesBurnedThisWeek {
+            calories += cal.calorieCount
+        }
+        for exercise in profile.exercisesThisWeek {
+            time += exercise.exercise
+        }
+        for rate in profile.averageHeartRate {
+            heartRate += rate.heartRate
+        }
+        heartRate = heartRate/Double(profile.averageHeartRate.count)
+        if heartRate.isNaN {
+            weeklyAvgHeartRateLabel.text = "N/A"
+        } else {
+            heartRate =
+                Double( Int( heartRate/Double(profile.averageHeartRate.count)*100 ) )/100
+            weeklyAvgHeartRateLabel.text = "\(heartRate)"
+        }
+        weeklyWorkoutMinLabel.text = "\(time)"
+        weeklyCalLabel.text = "\(calories)"
         // Set some temporary data for the chart.
-        let minutes = ChartDataEntry(x: 10, y: 100)
-        let minutes1 = ChartDataEntry(x: 20, y: 200)
-        let minutes2 = ChartDataEntry(x: 30, y: 300)
-        // Append the temporary data to be read by the chart.
-        self.minutes.append(minutes)
-        self.minutes.append(minutes1)
-        self.minutes.append(minutes2)
+        for exercise in profile.exercisesThisWeek {
+            let minute = ChartDataEntry(x: Double(exercise.daysElapsed), y: Double(exercise.exercise))
+            // Append the temporary data to be read by the chart.
+            self.minutes.append(minute)
+        }
         // Run the function to update the chart.
         updateDataChart()
     }

@@ -25,8 +25,10 @@ class MainTabBarViewController: UITabBarController {
         // Call the function to set the fonts for the tab bar titles.
         setTabBarItems()
         
-        let profile = Profile()
-        ProfileController.sharedInstance.profile = profile
+        if ProfileController.sharedInstance.profile == nil {
+            let profile = Profile()
+            ProfileController.sharedInstance.profile = profile
+        }
     }
     
     override func viewWillLayoutSubviews() {
