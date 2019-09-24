@@ -12,16 +12,19 @@ import CloudKit
 struct Exercises: Codable {
     var exercise: Int
     var daysElapsed: Int
-}
-
-struct Weights: Codable {
-    var weight: Double
-    var daysElapsed: Int
+    var dateOfCreation: Date
 }
 
 struct Calories: Codable {
     var calorieCount: Double
     var daysElapsed: Int
+    var dateOfCreation: Date
+}
+
+struct HeartRate: Codable {
+    var heartRate: Double
+    var daysElapsed: Int
+    var dateOfCreation: Date
 }
 
 class Profile: Codable {
@@ -38,12 +41,11 @@ class Profile: Codable {
     var reminderDate: Int
     var exercisesThisWeek: [Exercises]
     var completedExercises: Int
-    var totalTimeExercising: Int
+    var totalTimeExercising: Double
     var weight: Double
     var caloriesBurnedToday: Double
     var totalCaloriesBurned: Double
-    var averageHeartRate: [Double]
-    var weightsForWeeklyPlot: [Weights]
+    var averageHeartRate: [HeartRate]
     var caloriesBurnedThisWeek: [Calories]
     var lastDate: Date
     
@@ -60,12 +62,11 @@ class Profile: Codable {
          reminderDate: Int = 0,
          exercisesThisWeek: [Exercises] = [],
          completedExercises: Int = 0,
-         totalTimeExericising: Int = 0,
+         totalTimeExericising: Double = 0.0,
          weight: Double = -1,
          caloriesBurnedToday: Double = 0.0,
          totalCaloriesBurned: Double = 0.0,
-         averageHeartRate: [Double] = [],
-         weightsForWeeklyPlot: [Weights] = [],
+         averageHeartRate: [HeartRate] = [],
          caloriesBurnedThisWeek: [Calories] = [],
          lastDate: Date = Date()) {
         self.name = name
@@ -85,7 +86,6 @@ class Profile: Codable {
         self.averageHeartRate = averageHeartRate
         self.caloriesBurnedToday = caloriesBurnedToday
         self.totalCaloriesBurned = totalCaloriesBurned
-        self.weightsForWeeklyPlot = weightsForWeeklyPlot
         self.caloriesBurnedThisWeek = caloriesBurnedThisWeek
         self.lastDate = lastDate
     }

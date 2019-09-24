@@ -94,6 +94,7 @@ extension UpcomingWorkoutsViewController: UITableViewDelegate, UITableViewDataSo
         let secondsLabel = "\(totalTime%60)"
         // Set the labels in the cell's totalTimeLabel.
         cell.totalTimeLabel.text = "\(minutesLabel):\(secondsLabel)"
+        cell.calorieCount.text = "\(-Double(Int(HealthKitController.sharedInstance.getCaloriesBurned(durationOfWorkoutInMinutes: Double(totalTime)/60)*100))/100)"
         
         // Set the cells borders
         cell.layer.cornerRadius = cell.frame.height/5

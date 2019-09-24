@@ -19,7 +19,7 @@ class HealthKitController {
     let healthKitStore: HKHealthStore = HKHealthStore()
     var weights: [Double] = []
     var calories: [Double] = []
-    var heartRates: [Double] = []
+    var heartRates: [HeartRate] = []
     var timestampsWeight: [Date] = []
     var timestampsCalorie: [Date] = []
     var timestampsHeartRate: [Date] = []
@@ -82,10 +82,11 @@ class HealthKitController {
     }
     
     // Function to get the heart rate from the health app.
-    func checkHeartRate(completion: @escaping(Double) -> Void) {
+    func checkHeartRate(completion: @escaping(HeartRate) -> Void) {
         
         // Needed placeholder variable.
         var heartRate: Double = 0.0
+        var rate: HeartRate = HeartRate(heartRate: 0.0, daysElapsed: 0, dateOfCreation: Date())
         
         // Set and unwrap the heart rate sample type from HealthKit
         guard let heartRateType = HKSampleType.quantityType(forIdentifier: .heartRate) else {return}
@@ -102,7 +103,8 @@ class HealthKitController {
                 // Convert the result to a double from the appropriate units and set it to the placeholder declared above.
                 heartRate = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
                 // Run the completion handler and pass back the heart rate.
-                completion(heartRate)
+                rate = HeartRate(heartRate: heartRate, daysElapsed: 0, dateOfCreation: Date())
+                completion(rate)
             }
         }
         // Run the heart rate check query.
@@ -110,7 +112,7 @@ class HealthKitController {
     }
     
     // Function to set up an observer to pull new heart rates whenever the watch reads an updated heart rate.
-    func heartRateObserver (completion: @escaping (Double) -> Void) {
+    func heartRateObserver (completion: @escaping (HeartRate) -> Void) {
         
         // Set and unwrap the heart rate sample type from HealthKit
         guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {return}

@@ -15,8 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        ProfileController.sharedInstance.loadFromPersistentStore()
+        //Override point for customization after application launch.
+        ProfileController.sharedInstance.loadFromPersistentStore { (success) in
+            if success {
+                guard let profile = ProfileController.sharedInstance.profile else {return}
+                ProfileController.sharedInstance.advanceDate(profile: profile)
+            }
+        }
         
         let yesAction = UNNotificationAction(identifier: "accept_identifier", title: "accept")
         let noAction = UNNotificationAction(identifier: "delcline_identifier", title: "decline")

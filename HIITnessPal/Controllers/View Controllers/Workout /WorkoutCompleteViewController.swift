@@ -63,7 +63,8 @@ class WorkoutCompleteViewController: UIViewController {
         guard let profile = profile else {return}
         guard let calorie = calorieCount.text else {return}
         guard let calorieDouble = Double(calorie) else {return}
-        ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: [Exercises(exercise: 1, daysElapsed: 0)], completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, weightsForWeeklyPlot: nil, caloriesBurnedThisWeek: [Calories(calorieCount: calorieDouble, daysElapsed: 0)])
+        let minutes = Double(Int(time*100/60))/100
+        ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: nil, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: [Exercises(exercise: 1, daysElapsed: 0, dateOfCreation: Date())], completedExercises: 1, totalTimeExercising: minutes, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, caloriesBurnedThisWeek: [Calories(calorieCount: calorieDouble, daysElapsed: 0, dateOfCreation: Date())])
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         
         

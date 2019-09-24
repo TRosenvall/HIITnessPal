@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController {
             calorieBurn.append(calorie.calorieCount)
         }
         let numberOfCalories = calorieBurn.reduce(0, +)
-        let numberOfExercisesThisWeek = profile.exercisesThisWeek
+        let numberOfExercisesThisWeek = profile.exercisesThisWeek.count
         // Set the proper labels
         numberOfExercisesLabel.text = "\(numberOfExercises)"
         numberOfMinutesExercisedLabel.text = "\(numberOfMinutes)"
