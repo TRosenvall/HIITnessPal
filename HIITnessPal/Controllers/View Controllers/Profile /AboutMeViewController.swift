@@ -12,17 +12,24 @@ import HealthKit
 class AboutMeViewController: UIViewController {
 
     // Setup IBOutlets
-    @IBOutlet weak var healthKitSwitch: UISwitch!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var genderTextField: UITextField!
-    @IBOutlet weak var ageTextField: PasteDisabledTextField!
-    @IBOutlet weak var weightTextField: PasteDisabledTextField!
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var aboutMeLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var healthAppConnectLabel: UILabel!
+    @IBOutlet weak var healthKitSwitch: UISwitch!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var ageTextField: PasteDisabledTextField!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var weightTextField: PasteDisabledTextField!
     @IBOutlet weak var preferenceLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
-    
+
     // Set the user profile and create a Picker View for the gender
     let profile = ProfileController.sharedInstance.profile
     let genderPicker = UIPickerView()
@@ -34,12 +41,17 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupDisplay()
+        
         // Set the title views gradient and shadow.
-        SetGradient.setGradient(view: titleView, mainColor: .getHIITPrimaryOrange, secondColor: .getHIITAccentOrange)
+        titleView.addGradient(colors: [.getHIITPrimaryOrange, .getHIITAccentOrange], locations: [0,1])
+        titleView.layer.masksToBounds = false
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
         // Set the progressView, backButton, nextButton, and preferenceLabel for first time users
+        
         guard let profile = profile else {return}
         if profile.firstLogin {
             progressView.isHidden = false
@@ -71,6 +83,16 @@ class AboutMeViewController: UIViewController {
         print("----")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initialFade()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fadeIn()
+    }
+    
     // The function that is called if the view enters the foreground from the background.
     @objc func willEnterForeground() {
         // Update the switch
@@ -97,7 +119,11 @@ class AboutMeViewController: UIViewController {
     // Check if the back button has been tapped.
     @IBAction func backButtonTapped(_ sender: Any) {
         // Dismiss the view to go back to the profile view.
-        self.dismiss(animated: true, completion: nil)
+        fadeOut { (success) in
+            if success {
+                self.dismiss(animated: false, completion: nil)
+            }
+        }
     }
     
     // General Screen Tapped Gesture Recognizer
@@ -114,11 +140,307 @@ class AboutMeViewController: UIViewController {
             // If it's the first login present MyPlanStoryboard.
             let storyboard = UIStoryboard(name: "HiitnessProfile", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "MyPlanStoryboard")
-            self.present(viewController, animated: true, completion: nil)
+            viewController.modalPresentationStyle = .fullScreen
+            
+            fadeOut { (success) in
+                if success {
+                    self.present(viewController, animated: false, completion: nil)
+                }
+            }
         } else {
             // Dismiss the storyboard.
-            self.dismiss(animated: true, completion: nil)
+            fadeOut { (success) in
+                if success {
+                    self.dismiss(animated: false, completion: nil)
+                }
+            }
         }
+    }
+    
+    func setupDisplay() {
+        
+        var titleFontSize: CGFloat = 0
+        var titleHeightMultiplier: CGFloat = 0
+        var backButtonLeadingConstant: CGFloat = 0
+        var backButtonBottomConstant: CGFloat = 0
+        var backButtonHeightMultiplier: CGFloat = 0
+        var aboutMeLabelWidthMultiplier: CGFloat = 0
+        var aboutMeLabelbottomConstant: CGFloat = 0
+        var progressViewBottomConstant: CGFloat = 0
+        var progressViewWidthMultiplier: CGFloat = 0
+        
+        var informationLabelTopConstant: CGFloat = 0
+        var informationLabelWidthMultiplier: CGFloat = 0
+        var healthAppConnectLabelTopConstant: CGFloat = 0
+        
+        var nameLabelTopConstant: CGFloat = 0
+        var genderLabelTopConstant: CGFloat = 0
+        var ageLabelTopConstant: CGFloat = 0
+        var weightLabelTopConstant: CGFloat = 0
+        
+        var nextButtonWidthMultiplier: CGFloat = 0
+        var nextButtonHeightConstant: CGFloat = 0
+        var nextButtonBottomConstant: CGFloat = 0
+        var preferenceLabelBottomConstant: CGFloat = 0
+        
+        switch (getiPhoneSize()) {
+        case "small":
+            titleFontSize = 30
+            
+            titleHeightMultiplier = 0.125
+            
+            backButtonLeadingConstant = 11
+            backButtonBottomConstant = 2
+            backButtonHeightMultiplier = 0.7
+            
+            aboutMeLabelWidthMultiplier = 0.5
+            if profile?.firstLogin == true {
+                aboutMeLabelbottomConstant = -5
+            } else {
+                aboutMeLabelbottomConstant = 0
+            }
+            progressViewBottomConstant = -8
+            progressViewWidthMultiplier = 0.5
+            
+            informationLabelTopConstant = 22
+            informationLabelWidthMultiplier = 0.9
+            healthAppConnectLabelTopConstant = 22
+            
+            nameLabelTopConstant = 44
+            genderLabelTopConstant = 22
+            ageLabelTopConstant = 22
+            weightLabelTopConstant = 22
+            
+            nextButtonWidthMultiplier = 0.4
+            nextButtonHeightConstant = 44
+            nextButtonBottomConstant = -44
+            preferenceLabelBottomConstant = -22
+        case "medium":
+            titleFontSize = 30
+            
+            titleHeightMultiplier = 0.125
+            backButtonLeadingConstant = 24
+            backButtonBottomConstant = -4
+            backButtonHeightMultiplier = 0.75
+            aboutMeLabelWidthMultiplier = 0.5
+            if profile?.firstLogin == true {
+                aboutMeLabelbottomConstant = -8
+            } else {
+                aboutMeLabelbottomConstant = 0
+            }
+            progressViewBottomConstant = -11
+            progressViewWidthMultiplier = 0.5
+            
+            informationLabelTopConstant = 22
+            informationLabelWidthMultiplier = 0.9
+            healthAppConnectLabelTopConstant = 22
+            
+            nameLabelTopConstant = 44
+            genderLabelTopConstant = 22
+            ageLabelTopConstant = 22
+            weightLabelTopConstant = 22
+            
+            nextButtonWidthMultiplier = 0.4
+            nextButtonHeightConstant = 44
+            nextButtonBottomConstant = -44
+            preferenceLabelBottomConstant = -22
+        case "large":
+            titleFontSize = 30
+            
+            titleHeightMultiplier = 0.125
+            backButtonLeadingConstant = 24
+            backButtonBottomConstant = -4
+            backButtonHeightMultiplier = 0.75
+            aboutMeLabelWidthMultiplier = 0.5
+            if profile?.firstLogin == true {
+                aboutMeLabelbottomConstant = -12
+            } else {
+                aboutMeLabelbottomConstant = 0
+            }
+            progressViewBottomConstant = -11
+            progressViewWidthMultiplier = 0.5
+            
+            informationLabelTopConstant = 22
+            informationLabelWidthMultiplier = 0.9
+            healthAppConnectLabelTopConstant = 22
+            
+            nameLabelTopConstant = 44
+            genderLabelTopConstant = 22
+            ageLabelTopConstant = 22
+            weightLabelTopConstant = 22
+            
+            nextButtonWidthMultiplier = 0.4
+            nextButtonHeightConstant = 44
+            nextButtonBottomConstant = -44
+            preferenceLabelBottomConstant = -22
+        case "x":
+            titleFontSize = 30
+            
+            titleHeightMultiplier = 0.125
+            backButtonLeadingConstant = 24
+            backButtonBottomConstant = -9
+            backButtonHeightMultiplier = 0.75
+            aboutMeLabelWidthMultiplier = 0.5
+            if profile?.firstLogin == true {
+                aboutMeLabelbottomConstant = -9
+            } else {
+                aboutMeLabelbottomConstant = 0
+            }
+            progressViewBottomConstant = -17
+            progressViewWidthMultiplier = 0.5
+            
+            informationLabelTopConstant = 22
+            informationLabelWidthMultiplier = 0.9
+            healthAppConnectLabelTopConstant = 22
+            
+            nameLabelTopConstant = 44
+            genderLabelTopConstant = 22
+            ageLabelTopConstant = 22
+            weightLabelTopConstant = 22
+            
+            nextButtonWidthMultiplier = 0.4
+            nextButtonHeightConstant = 44
+            nextButtonBottomConstant = -44
+            preferenceLabelBottomConstant = -22
+        case "r":
+            titleFontSize = 30
+            
+            titleHeightMultiplier = 0.125
+            backButtonLeadingConstant = 24
+            backButtonBottomConstant = -9
+            backButtonHeightMultiplier = 0.75
+            aboutMeLabelWidthMultiplier = 0.5
+            if profile?.firstLogin == true {
+                aboutMeLabelbottomConstant = -9
+            } else {
+                aboutMeLabelbottomConstant = 0
+            }
+            progressViewBottomConstant = -17
+            progressViewWidthMultiplier = 0.5
+            
+            informationLabelTopConstant = 22
+            informationLabelWidthMultiplier = 0.9
+            healthAppConnectLabelTopConstant = 22
+            
+            nameLabelTopConstant = 44
+            genderLabelTopConstant = 22
+            ageLabelTopConstant = 22
+            weightLabelTopConstant = 22
+            
+            nextButtonWidthMultiplier = 0.4
+            nextButtonHeightConstant = 44
+            nextButtonBottomConstant = -44
+            preferenceLabelBottomConstant = -22
+        default:
+            print(self.view.frame.height)
+        }
+        
+        titleView.translatesAutoresizingMaskIntoConstraints = false
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        aboutMeLabel.translatesAutoresizingMaskIntoConstraints = false
+        aboutMeLabel.font = aboutMeLabel.font.withSize(titleFontSize)
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        
+        informationLabel.translatesAutoresizingMaskIntoConstraints = false
+        informationLabel.textAlignment = .justified
+        healthAppConnectLabel.translatesAutoresizingMaskIntoConstraints = false
+        healthKitSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameTextField.translatesAutoresizingMaskIntoConstraints = false
+        genderLabel.translatesAutoresizingMaskIntoConstraints = false
+        genderTextField.translatesAutoresizingMaskIntoConstraints = false
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
+        ageTextField.translatesAutoresizingMaskIntoConstraints = false
+        weightLabel.translatesAutoresizingMaskIntoConstraints = false
+        weightTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        preferenceLabel.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            titleView.topAnchor.constraint(equalTo: view.topAnchor),
+            titleView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: titleHeightMultiplier),
+            titleView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            titleView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            backButton.leadingAnchor.constraint(equalTo: titleView.leadingAnchor, constant: backButtonLeadingConstant),
+            backButton.bottomAnchor.constraint(equalTo: titleView.bottomAnchor, constant: backButtonBottomConstant),
+            backButton.heightAnchor.constraint(equalToConstant: titleView.frame.size.height * backButtonHeightMultiplier),
+            backButton.widthAnchor.constraint(equalTo: backButton.heightAnchor),
+            
+            aboutMeLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor),
+            aboutMeLabel.widthAnchor.constraint(equalTo: titleView.widthAnchor, multiplier: aboutMeLabelWidthMultiplier),
+            aboutMeLabel.centerYAnchor.constraint(equalTo: backButton.centerYAnchor, constant: aboutMeLabelbottomConstant),
+            
+            progressView.centerXAnchor.constraint(equalTo: titleView.centerXAnchor),
+            progressView.bottomAnchor.constraint(equalTo: titleView.bottomAnchor, constant: progressViewBottomConstant),
+            progressView.widthAnchor.constraint(equalTo: titleView.widthAnchor, multiplier: progressViewWidthMultiplier),
+            
+            informationLabel.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: informationLabelTopConstant),
+            informationLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            informationLabel.heightAnchor.constraint(equalToConstant: informationLabel.intrinsicContentSize.height * 2),
+            informationLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: informationLabelWidthMultiplier),
+            
+            healthAppConnectLabel.leadingAnchor.constraint(equalTo: informationLabel.leadingAnchor),
+            healthAppConnectLabel.widthAnchor.constraint(equalToConstant: healthAppConnectLabel.intrinsicContentSize.width),
+            healthAppConnectLabel.heightAnchor.constraint(equalToConstant: healthAppConnectLabel.intrinsicContentSize.height),
+            healthAppConnectLabel.topAnchor.constraint(equalTo: informationLabel.bottomAnchor, constant: healthAppConnectLabelTopConstant),
+            
+            healthKitSwitch.trailingAnchor.constraint(equalTo: informationLabel.trailingAnchor),
+            healthKitSwitch.centerYAnchor.constraint(equalTo: healthAppConnectLabel.centerYAnchor),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: healthAppConnectLabel.leadingAnchor),
+            nameLabel.topAnchor.constraint(equalTo: healthAppConnectLabel.bottomAnchor, constant: nameLabelTopConstant),
+            
+            nameTextField.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
+            nameTextField.trailingAnchor.constraint(equalTo: healthKitSwitch.trailingAnchor),
+            
+            genderLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            genderLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: genderLabelTopConstant),
+            
+            genderTextField.centerYAnchor.constraint(equalTo: genderLabel.centerYAnchor),
+            genderTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
+            
+            ageLabel.leadingAnchor.constraint(equalTo: genderLabel.leadingAnchor),
+            ageLabel.topAnchor.constraint(equalTo: genderLabel.bottomAnchor, constant: ageLabelTopConstant),
+            
+            ageTextField.centerYAnchor.constraint(equalTo: ageLabel.centerYAnchor),
+            ageTextField.trailingAnchor.constraint(equalTo: genderTextField.trailingAnchor),
+            
+            weightLabel.leadingAnchor.constraint(equalTo: ageLabel.leadingAnchor),
+            weightLabel.topAnchor.constraint(equalTo: ageLabel.bottomAnchor, constant: weightLabelTopConstant),
+            
+            weightTextField.centerYAnchor.constraint(equalTo: weightLabel.centerYAnchor),
+            weightTextField.trailingAnchor.constraint(equalTo: ageTextField.trailingAnchor),
+            
+            nextButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            nextButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: nextButtonWidthMultiplier),
+            nextButton.heightAnchor.constraint(equalToConstant: nextButtonHeightConstant),
+            nextButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: nextButtonBottomConstant),
+            
+            preferenceLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            preferenceLabel.widthAnchor.constraint(equalToConstant: preferenceLabel.intrinsicContentSize.width),
+            preferenceLabel.heightAnchor.constraint(equalToConstant: nextButton.intrinsicContentSize.height/2),
+            preferenceLabel.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: preferenceLabelBottomConstant)
+        ])
+    }
+    
+    func getiPhoneSize () -> String {
+        switch( self.view.frame.height) {
+        case 568:
+            return "small"
+        case 667:
+            return "medium"
+        case 736:
+            return "large"
+        case 812:
+            return "x"
+        case 896:
+            return "r"
+        default: print(self.view.frame.height)
+        }
+        return ""
     }
     
     // Updates the user profiles values
@@ -174,6 +496,45 @@ class AboutMeViewController: UIViewController {
            
             healthKitSwitch.isEnabled = true
             ProfileController.sharedInstance.profile(profile: profile, name: nil, firstLogin: nil, healthKitIsOn: healthKitSwitch.isEnabled, remindersEnabled: nil, notificationsEnabled: nil, age: nil, goal: nil, gender: nil, idealPlan: nil, reminderDate: nil, exercisesThisWeek: nil, completedExercises: nil, totalTimeExercising: nil, weight: nil, caloriesBurnedToday: nil, totalCaloriesBurned: nil, averageHeartRate: nil, caloriesBurnedThisWeek: nil)
+        }
+    }
+    
+    func initialFade() {
+        for sub in self.view.subviews {
+            if sub != titleView {
+                sub.alpha = 0
+            }
+        }
+        for sub in titleView.subviews {
+            sub.alpha = 0
+        }
+    }
+    
+    func fadeOut(completion: @escaping (Bool) -> Void) {
+        UIView.animate(withDuration: 0.2, animations: {
+            for sub in self.view.subviews {
+                if sub != self.titleView {
+                    sub.alpha = 0
+                }
+            }
+            for sub in self.titleView.subviews {
+                sub.alpha = 0
+            }
+        }) { (success) in
+            completion(success)
+        }
+    }
+    
+    func fadeIn() {
+        UIView.animate(withDuration: 0.2) {
+            for sub in self.view.subviews {
+                if sub != self.titleView {
+                    sub.alpha = 1
+                }
+            }
+            for sub in self.titleView.subviews {
+                sub.alpha = 1
+            }
         }
     }
     
@@ -302,7 +663,7 @@ extension AboutMeViewController: UITextFieldDelegate {
         guard let text = textField.text else {return false}
         // If it's the field for the age or weight
         if textField == ageTextField || textField == weightTextField {
-            // Limit to five characters
+            // Limit to Three characters
             return text.count < 3
         }
         // For the name, limit to nine characters.

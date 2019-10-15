@@ -9,10 +9,10 @@
 import UIKit
 import CloudKit
 
-class Workout {
+class Workout: Codable {
     
     // Workout Variables and Constants
-    let gif: String
+    let gif: Int
     var name: String
     let image: String
     var description: String
@@ -20,7 +20,7 @@ class Workout {
     var duration: Int
     
     // Workout Initializer
-    init(gif: String,
+    init(gif: Int,
          name: String,
          image: String,
          description: String,
@@ -32,6 +32,12 @@ class Workout {
         self.description = description
         self.rest = rest
         self.duration = duration
+    }
+}
+
+extension Workout: Equatable {
+    static func == (lhs: Workout, rhs: Workout) -> Bool {
+        return lhs.description == rhs.description && lhs.duration == rhs.duration && lhs.gif == rhs.gif && lhs.name == rhs.name && lhs.image == rhs.image && lhs.rest == rhs.rest
     }
 }
 

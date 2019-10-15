@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-class Workouts {
+class Workouts: Codable {
     
     // Workouts Variables
     var name: String
@@ -23,5 +23,11 @@ class Workouts {
         self.name = name
         self.multiplier = multiplier
         self.workouts = workouts
+    }
+}
+
+extension Workouts: Equatable {
+    static func == (lhs: Workouts, rhs: Workouts) -> Bool {
+        return lhs.multiplier == rhs.multiplier && lhs.name == rhs.name && lhs.workouts == rhs.workouts
     }
 }

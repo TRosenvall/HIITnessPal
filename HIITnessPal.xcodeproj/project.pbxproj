@@ -19,7 +19,6 @@
 		16A2F0EC23218D4700080F3C /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0EB23218D4700080F3C /* NotificationHelper.swift */; };
 		16A2F0F02321951700080F3C /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0EF2321951700080F3C /* ColorAssets.xcassets */; };
 		16A2F0F223219ED500080F3C /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0F123219ED500080F3C /* nunito */; };
-		16A2F0F423219FD700080F3C /* GifAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F0F323219FD700080F3C /* GifAssets.xcassets */; };
 		16A2F0F82321A33C00080F3C /* CreateNewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */; };
 		16A2F0FA2321A34100080F3C /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0F92321A34100080F3C /* DescriptionViewController.swift */; };
 		16A2F0FC2321A34900080F3C /* PastWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */; };
@@ -27,7 +26,6 @@
 		16A2F1002321A35700080F3C /* UpcomingWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F0FF2321A35700080F3C /* UpcomingWorkoutsViewController.swift */; };
 		16A2F1062321A38000080F3C /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1022321A38000080F3C /* AboutMeViewController.swift */; };
 		16A2F1072321A38000080F3C /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1032321A38000080F3C /* MyPlanViewController.swift */; };
-		16A2F1082321A38000080F3C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1042321A38000080F3C /* ProfileViewController.swift */; };
 		16A2F1092321A38000080F3C /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1052321A38000080F3C /* RemindersViewController.swift */; };
 		16A2F10F2321A3B700080F3C /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */; };
 		16A2F1102321A3B700080F3C /* WorkoutEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */; };
@@ -60,6 +58,7 @@
 		16A2F1592321B36F00080F3C /* HiitnessProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1582321B36F00080F3C /* HiitnessProfile.storyboard */; };
 		16A2F1662321B4E100080F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16A2F1652321B4E100080F3C /* Main.storyboard */; };
 		48E870433B75FE7831D151F4 /* Pods_HIITnessPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F364806DBC2A96EC5E172C7E /* Pods_HIITnessPalTests.framework */; };
+		854CF4CC2347EC9E00BFA907 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CF4CB2347EC9E00BFA907 /* ProfileViewController.swift */; };
 		85C4F51023225EBA00E3C372 /* MyHiitnessPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */; };
 		85C4F51723228B7F00E3C372 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F51523228B7F00E3C372 /* Interface.storyboard */; };
 		85C4F51923228B8000E3C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F51823228B8000E3C372 /* Assets.xcassets */; };
@@ -73,6 +72,10 @@
 		85C4F53C23228FC800E3C372 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4F53B23228FC800E3C372 /* HealthKit.framework */; };
 		85C4F53E23229EFD00E3C372 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F1262321A5A400080F3C /* Profile.swift */; };
 		85C4F53F23229F0300E3C372 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A2F13A2321A99900080F3C /* ProfileController.swift */; };
+		85CCCC2A2349088D002ED2C7 /* ChooseWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCCC292349088D002ED2C7 /* ChooseWorkoutTableViewCell.swift */; };
+		85CCCC2C234B7BDC002ED2C7 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCCC2B234B7BDC002ED2C7 /* iOSDevCenters+GIF.swift */; };
+		85CCCC2E234ECD3C002ED2C7 /* CompletedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCCC2D234ECD3C002ED2C7 /* CompletedWorkout.swift */; };
+		85CCCC30234ECDB3002ED2C7 /* CompletedWorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CCCC2F234ECDB3002ED2C7 /* CompletedWorkoutsController.swift */; };
 		901CA412A695EE06EA9D1DCB /* Pods_HIITnessPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */; };
 		E63445BD0E70B6A5A52EF395 /* Pods_HIITnessPalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */; };
 /* End PBXBuildFile section */
@@ -153,7 +156,6 @@
 		16A2F0EB23218D4700080F3C /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		16A2F0EF2321951700080F3C /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		16A2F0F123219ED500080F3C /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
-		16A2F0F323219FD700080F3C /* GifAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GifAssets.xcassets; sourceTree = "<group>"; };
 		16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewWorkoutViewController.swift; sourceTree = "<group>"; };
 		16A2F0F92321A34100080F3C /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +163,6 @@
 		16A2F0FF2321A35700080F3C /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
 		16A2F1022321A38000080F3C /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		16A2F1032321A38000080F3C /* MyPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
-		16A2F1042321A38000080F3C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		16A2F1052321A38000080F3C /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		16A2F10B2321A3B700080F3C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16A2F10C2321A3B700080F3C /* WorkoutEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutEditViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 		16A2F1652321B4E100080F3C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		216133BCF2EF9EDC2D2D3428 /* Pods-HIITnessPalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalUITests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalUITests/Pods-HIITnessPalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		530C69B4889AE3DDF87EDF05 /* Pods_HIITnessPalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		854CF4CB2347EC9E00BFA907 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		85C4F50F23225EBA00E3C372 /* MyHiitnessPlan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyHiitnessPlan.storyboard; sourceTree = "<group>"; };
 		85C4F51323228B7E00E3C372 /* HIITnessPalWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITnessPalWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C4F51623228B7F00E3C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -209,6 +211,10 @@
 		85C4F52D23228B8100E3C372 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		85C4F53A23228FC800E3C372 /* HIITnessPalWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HIITnessPalWatch Extension.entitlements"; sourceTree = "<group>"; };
 		85C4F53B23228FC800E3C372 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		85CCCC292349088D002ED2C7 /* ChooseWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		85CCCC2B234B7BDC002ED2C7 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		85CCCC2D234ECD3C002ED2C7 /* CompletedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWorkout.swift; sourceTree = "<group>"; };
+		85CCCC2F234ECDB3002ED2C7 /* CompletedWorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWorkoutsController.swift; sourceTree = "<group>"; };
 		93E280227CD71E918ACB05FA /* Pods-HIITnessPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPal.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPal/Pods-HIITnessPal.release.xcconfig"; sourceTree = "<group>"; };
 		9A9EF9521A9042110802B463 /* Pods_HIITnessPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIITnessPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C850508CB91B64A7A31C6A7E /* Pods-HIITnessPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIITnessPalTests.release.xcconfig"; path = "Target Support Files/Pods-HIITnessPalTests/Pods-HIITnessPalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 		16A2F0A923218A1A00080F3C /* HIITnessPal */ = {
 			isa = PBXGroup;
 			children = (
+				85CCCC31234F55CD002ED2C7 /* Obsolete */,
 				16A2F0E123218B6300080F3C /* HIITnessPal.entitlements */,
 				16A2F0D923218AE100080F3C /* Models */,
 				16A2F0DC23218AFD00080F3C /* Views */,
@@ -321,7 +328,6 @@
 				16A2F0B123218A1A00080F3C /* Assets.xcassets */,
 				16A2F0F123219ED500080F3C /* nunito */,
 				16A2F0EF2321951700080F3C /* ColorAssets.xcassets */,
-				16A2F0F323219FD700080F3C /* GifAssets.xcassets */,
 				16A2F0B323218A1A00080F3C /* LaunchScreen.storyboard */,
 				16A2F0B623218A1A00080F3C /* Info.plist */,
 			);
@@ -336,6 +342,7 @@
 				16A2F12A2321A5B000080F3C /* Reminders.swift */,
 				16A2F12E2321A5BA00080F3C /* Workouts.swift */,
 				16A2F12C2321A5B500080F3C /* Workout.swift */,
+				85CCCC2D234ECD3C002ED2C7 /* CompletedWorkout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 				16A2F1222321A44200080F3C /* WorkoutEditTableViewCell.swift */,
 				16A2F1202321A44200080F3C /* WorkoutListTableViewCell.swift */,
 				16A2F1212321A44200080F3C /* WorkoutTableViewCell.swift */,
+				85CCCC292349088D002ED2C7 /* ChooseWorkoutTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 				16A2F1402321AB2B00080F3C /* CountdownTimer.swift */,
 				16A2F1322321A5E000080F3C /* ReminderController.swift */,
 				16A2F1342321A5E500080F3C /* HealthKitController.swift */,
+				85CCCC2F234ECDB3002ED2C7 /* CompletedWorkoutsController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				16A2F0E723218CE900080F3C /* ColorExtension.swift */,
 				16A2F0E923218D1700080F3C /* SetGradient.swift */,
 				16A2F0EB23218D4700080F3C /* NotificationHelper.swift */,
+				85CCCC2B234B7BDC002ED2C7 /* iOSDevCenters+GIF.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -435,7 +445,6 @@
 		16A2F1012321A36F00080F3C /* My Plan  */ = {
 			isa = PBXGroup;
 			children = (
-				16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */,
 				16A2F0F92321A34100080F3C /* DescriptionViewController.swift */,
 				16A2F0FB2321A34900080F3C /* PastWorkoutsViewController.swift */,
 				16A2F0FD2321A35000080F3C /* SelectWorkoutViewController.swift */,
@@ -447,7 +456,7 @@
 		16A2F10A2321A39200080F3C /* Profile  */ = {
 			isa = PBXGroup;
 			children = (
-				16A2F1042321A38000080F3C /* ProfileViewController.swift */,
+				854CF4CB2347EC9E00BFA907 /* ProfileViewController.swift */,
 				16A2F1022321A38000080F3C /* AboutMeViewController.swift */,
 				16A2F1032321A38000080F3C /* MyPlanViewController.swift */,
 				16A2F1052321A38000080F3C /* RemindersViewController.swift */,
@@ -502,6 +511,14 @@
 				85C4F52D23228B8100E3C372 /* PushNotificationPayload.apns */,
 			);
 			path = "HIITnessPalWatch Extension";
+			sourceTree = "<group>";
+		};
+		85CCCC31234F55CD002ED2C7 /* Obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				16A2F0F72321A33C00080F3C /* CreateNewWorkoutViewController.swift */,
+			);
+			path = Obsolete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,7 +700,6 @@
 				85C4F51023225EBA00E3C372 /* MyHiitnessPlan.storyboard in Resources */,
 				16A2F0B523218A1A00080F3C /* LaunchScreen.storyboard in Resources */,
 				16A2F0B223218A1A00080F3C /* Assets.xcassets in Resources */,
-				16A2F0F423219FD700080F3C /* GifAssets.xcassets in Resources */,
 				16A2F0F02321951700080F3C /* ColorAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,6 +832,7 @@
 				16A2F0F82321A33C00080F3C /* CreateNewWorkoutViewController.swift in Sources */,
 				16A2F1352321A5E500080F3C /* HealthKitController.swift in Sources */,
 				16A2F1412321AB2B00080F3C /* CountdownTimer.swift in Sources */,
+				85CCCC2A2349088D002ED2C7 /* ChooseWorkoutTableViewCell.swift in Sources */,
 				16A2F1272321A5A400080F3C /* Profile.swift in Sources */,
 				16A2F12D2321A5B500080F3C /* Workout.swift in Sources */,
 				16A2F13B2321A99A00080F3C /* ProfileController.swift in Sources */,
@@ -824,8 +841,8 @@
 				16A2F1292321A5AA00080F3C /* Exercise.swift in Sources */,
 				16A2F0E823218CE900080F3C /* ColorExtension.swift in Sources */,
 				16A2F1332321A5E100080F3C /* ReminderController.swift in Sources */,
+				85CCCC30234ECDB3002ED2C7 /* CompletedWorkoutsController.swift in Sources */,
 				16A2F13F2321AB0000080F3C /* WorkoutTimerViewController.swift in Sources */,
-				16A2F1082321A38000080F3C /* ProfileViewController.swift in Sources */,
 				16A2F13D2321A9AD00080F3C /* PasteDisabledTextField.swift in Sources */,
 				16A2F0FC2321A34900080F3C /* PastWorkoutsViewController.swift in Sources */,
 				16A2F1072321A38000080F3C /* MyPlanViewController.swift in Sources */,
@@ -835,6 +852,7 @@
 				16A2F0EC23218D4700080F3C /* NotificationHelper.swift in Sources */,
 				16A2F1102321A3B700080F3C /* WorkoutEditViewController.swift in Sources */,
 				16A2F1252321A44200080F3C /* WorkoutEditTableViewCell.swift in Sources */,
+				85CCCC2E234ECD3C002ED2C7 /* CompletedWorkout.swift in Sources */,
 				16A2F10F2321A3B700080F3C /* WorkoutMainViewController.swift in Sources */,
 				16A2F0FE2321A35000080F3C /* SelectWorkoutViewController.swift in Sources */,
 				16A2F12F2321A5BA00080F3C /* Workouts.swift in Sources */,
@@ -848,7 +866,9 @@
 				16A2F1092321A38000080F3C /* RemindersViewController.swift in Sources */,
 				16A2F11C2321A43B00080F3C /* PastWorkoutsTableViewCell.swift in Sources */,
 				16A2F1242321A44200080F3C /* WorkoutTableViewCell.swift in Sources */,
+				85CCCC2C234B7BDC002ED2C7 /* iOSDevCenters+GIF.swift in Sources */,
 				16A2F1392321A97300080F3C /* ExerciseController.swift in Sources */,
+				854CF4CC2347EC9E00BFA907 /* ProfileViewController.swift in Sources */,
 				16A2F1232321A44200080F3C /* WorkoutListTableViewCell.swift in Sources */,
 				16A2F1312321A5D600080F3C /* WorkoutsController.swift in Sources */,
 			);
@@ -1051,6 +1071,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1071,6 +1092,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HIITnessPal/HIITnessPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1176,6 +1198,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				IBSC_MODULE = HIITnessPalWatch_Extension;
 				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
@@ -1195,6 +1218,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				IBSC_MODULE = HIITnessPalWatch_Extension;
 				INFOPLIST_FILE = HIITnessPalWatch/Info.plist;
@@ -1214,6 +1238,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "HIITnessPalWatch Extension/HIITnessPalWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "HIITnessPalWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1237,6 +1262,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "HIITnessPalWatch Extension/HIITnessPalWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "HIITnessPalWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

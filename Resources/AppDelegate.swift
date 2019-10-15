@@ -15,11 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         //Override point for customization after application launch.
         ProfileController.sharedInstance.loadFromPersistentStore { (success) in
             if success {
                 guard let profile = ProfileController.sharedInstance.profile else {return}
                 ProfileController.sharedInstance.advanceDate(profile: profile)
+            }
+        }
+        
+        CompletedWorkoutsController.sharedInstance.loadFromPersistentStore { (success) in
+            if success {
+                print("Load completedWorkouts successful")
+            }
+        }
+        
+        WorkoutsController.sharedInstance.loadFromPersistentStore { (success) in
+            if success {
+                print("Load workouts successful")
             }
         }
         
@@ -30,13 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([customCategory])
         
         let exercises = ExerciseController.sharedInstance.workouts
-        let tempWorkouts: [Workout] = [exercises[0], exercises[1], exercises[2], exercises[3]]
-        let tempWorkoutMultiplier: Int = 4
+        let tempWorkouts1: [Workout] = [exercises[0], exercises[1], exercises[2], exercises[3]]
+        let tempWorkout1Multiplier: Int = 4
         
-        WorkoutsController.sharedInstance.createWorkout(name: "Super Sweat", workouts: tempWorkouts, multiplier: tempWorkoutMultiplier)
+        let tempWorkouts2: [Workout] = [exercises[1], exercises[3], exercises[4], exercises[6]]
+        let tempWorkout2Multiplier: Int = 2
         
+        let tempWorkouts3: [Workout] = [exercises[2], exercises[4], exercises[6], exercises[7]]
+        let tempWorkout3Multiplier: Int = 8
         
-        
+        if WorkoutsController.sharedInstance.totalWorkouts.count == 0 {
+            WorkoutsController.sharedInstance.createWorkout(name: "Super Sweat", workouts: tempWorkouts1, multiplier: tempWorkout1Multiplier)
+            WorkoutsController.sharedInstance.createWorkout(name: "Four Score", workouts: tempWorkouts2, multiplier: tempWorkout2Multiplier)
+            WorkoutsController.sharedInstance.createWorkout(name: "Long Haul", workouts: tempWorkouts3, multiplier: tempWorkout3Multiplier)
+        }
         return true
     }
     

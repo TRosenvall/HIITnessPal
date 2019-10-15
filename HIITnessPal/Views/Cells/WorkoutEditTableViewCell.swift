@@ -15,15 +15,23 @@ class WorkoutEditTableViewCell: UITableViewCell {
     @IBOutlet weak var restView: UIView!
     @IBOutlet weak var workoutImageView: UIImageView!
     @IBOutlet weak var workoutTitle: UILabel!
+    @IBOutlet weak var workoutSubtractionButton: UIButton!
     @IBOutlet weak var workoutTimeLabel: UILabel!
+    @IBOutlet weak var workoutAdditionButton: UIButton!
+    @IBOutlet weak var restImageView: UIImageView!
+    @IBOutlet weak var restTitleLabel: UILabel!
     @IBOutlet weak var restTimeLabel: UILabel!
+    @IBOutlet weak var restAdditionButton: UIButton!
+    @IBOutlet weak var restSubtractionButton: UIButton!
     
     // Set Variables
     var workout: Workout? = nil
     
     // Subtracts one second from the duration of the exercise listed and updates it's time labels.
     @IBAction func workoutTimeSubtractButtonTapped(_ sender: Any) {
-        workout?.duration -= 1
+        if workout!.duration > 1 {
+            workout?.duration -= 1
+        }
         
         guard let duration = workout?.duration else {return}
         
@@ -47,7 +55,9 @@ class WorkoutEditTableViewCell: UITableViewCell {
     
     // Subtracts one second from the duration of the rest listed and updates it's time labels.
     @IBAction func restTimeSubtractButtonTapped(_ sender: Any) {
-        workout?.rest -= 1
+        if workout!.rest > 1 {
+            workout?.rest -= 1
+        }
         
         guard let rest = workout?.rest else {return}
         

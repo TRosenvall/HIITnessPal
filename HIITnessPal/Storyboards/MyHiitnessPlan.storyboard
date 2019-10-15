@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bij-y9-efh">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bij-y9-efh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,33 +20,38 @@
         <!--Upcoming Workouts View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UpcomingWorkoutsViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="UpcomingWorkoutsViewController" customModule="HIITnessPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-wQ-jL2">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-wQ-jL2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-An-8hW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-An-8hW">
                                         <rect key="frame" x="103.5" y="50.5" width="207" height="33.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsT-QG-GdB">
+                                        <rect key="frame" x="30" y="16" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="mTV-An-8hW" firstAttribute="centerY" secondItem="9h2-wQ-jL2" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="8qG-E2-Hv5"/>
-                                    <constraint firstItem="mTV-An-8hW" firstAttribute="width" secondItem="9h2-wQ-jL2" secondAttribute="width" multiplier="0.5" id="JGX-CU-9Hf"/>
-                                    <constraint firstItem="mTV-An-8hW" firstAttribute="centerX" secondItem="9h2-wQ-jL2" secondAttribute="centerX" id="LT3-TA-lbo"/>
-                                    <constraint firstItem="mTV-An-8hW" firstAttribute="height" secondItem="9h2-wQ-jL2" secondAttribute="height" multiplier="0.3" constant="6.5" id="c3K-ic-T4q"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mec-Yz-ppm">
                                 <rect key="frame" x="20" y="155" width="140" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Get-HIITPrimaryBlue"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-9i-lz6">
+                                <rect key="frame" x="225" y="144" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Get-HIITGray"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-nD-Rn9">
                                 <rect key="frame" x="20" y="120" width="140" height="48"/>
@@ -94,119 +97,124 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-FT-T4G">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-FT-T4G">
                                 <rect key="frame" x="20" y="309" width="374" height="420"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="upcomingWorkoutCell" rowHeight="192" id="FPL-0b-OEY" customClass="UpcomingWorkoutsTableViewCell" customModule="Get_HIIT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="upcomingWorkoutCell" rowHeight="192" id="FPL-0b-OEY" customClass="UpcomingWorkoutsTableViewCell" customModule="HIITnessPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPL-0b-OEY" id="7Ds-t8-b22">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Workout name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-wZ-h3x">
-                                                    <rect key="frame" x="103" y="19" width="168" height="29"/>
-                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-1S-1VE">
-                                                    <rect key="frame" x="18.5" y="57.5" width="337" height="19.5"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0M-4R-D1K">
+                                                    <rect key="frame" x="67" y="32" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjX-RH-pMO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="84.5" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-wZ-h3x">
+                                                            <rect key="frame" x="120" y="49" width="0.0" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjX-RH-pMO">
+                                                            <rect key="frame" x="120" y="54" width="0.0" height="19.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0co-gn-IcE">
-                                                            <rect key="frame" x="84.5" y="0.0" width="84" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0co-gn-IcE">
+                                                            <rect key="frame" x="120" y="53" width="0.0" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lac-Lf-Am6">
-                                                            <rect key="frame" x="168.5" y="0.0" width="84" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lac-Lf-Am6">
+                                                            <rect key="frame" x="120" y="53" width="0.0" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-cL-1S4">
-                                                            <rect key="frame" x="252.5" y="0.0" width="84.5" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-cL-1S4">
+                                                            <rect key="frame" x="120" y="53" width="0.0" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="0co-gn-IcE" firstAttribute="width" secondItem="lac-Lf-Am6" secondAttribute="width" id="8HZ-HN-64I"/>
-                                                        <constraint firstItem="BjX-RH-pMO" firstAttribute="width" secondItem="0co-gn-IcE" secondAttribute="width" id="Iah-fj-gWq"/>
-                                                        <constraint firstItem="lac-Lf-Am6" firstAttribute="width" secondItem="cv4-cL-1S4" secondAttribute="width" id="eJ1-uE-gyl"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-H0-gMA">
-                                                    <rect key="frame" x="17" y="107.5" width="97" height="57.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(Duration)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-KT-iL3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="97" height="31"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="(Duration)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-KT-iL3">
+                                                            <rect key="frame" x="73" y="51" width="94" height="25.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OD-c1-gkC">
-                                                            <rect key="frame" x="0.0" y="36" width="97" height="21.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OD-c1-gkC">
+                                                            <rect key="frame" x="73" y="53" width="94" height="21.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
                                                             <color key="textColor" name="Get-HIITGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-Nx-u3x">
-                                                    <rect key="frame" x="177.5" y="107.5" width="93.5" height="57.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(Calories)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NG-Rv-utT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="(Calories)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NG-Rv-utT">
+                                                            <rect key="frame" x="76" y="51" width="87" height="25.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-Wt-EWn">
-                                                            <rect key="frame" x="0.0" y="36" width="93.5" height="21.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-Wt-EWn">
+                                                            <rect key="frame" x="76" y="53" width="87" height="21.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
                                                             <color key="textColor" name="Get-HIITGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-j0-hsu">
+                                                            <rect key="frame" x="-23" y="14" width="126" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-gz-T7M">
+                                                            <rect key="frame" x="-23" y="51" width="126" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8Y-CZ-yu5">
+                                                            <rect key="frame" x="8" y="86" width="126" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgU-YB-0j3">
+                                                            <rect key="frame" x="151" y="86" width="126" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </view>
                                                     </subviews>
-                                                </stackView>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="CEQ-Nx-u3x" firstAttribute="centerY" secondItem="7Ds-t8-b22" secondAttribute="centerY" multiplier="1.42" id="1lT-oN-HQg"/>
-                                                <constraint firstItem="ftJ-wZ-h3x" firstAttribute="centerX" secondItem="7Ds-t8-b22" secondAttribute="centerX" id="6P3-ax-fzG"/>
-                                                <constraint firstItem="0XQ-1S-1VE" firstAttribute="centerX" secondItem="7Ds-t8-b22" secondAttribute="centerX" id="FuD-xe-2wF"/>
-                                                <constraint firstItem="mOK-H0-gMA" firstAttribute="height" secondItem="7Ds-t8-b22" secondAttribute="height" multiplier="0.3" id="Kms-xz-r0u"/>
-                                                <constraint firstItem="mOK-H0-gMA" firstAttribute="width" secondItem="7Ds-t8-b22" secondAttribute="width" multiplier="0.26" id="PPP-1h-bKO"/>
-                                                <constraint firstItem="ftJ-wZ-h3x" firstAttribute="height" secondItem="7Ds-t8-b22" secondAttribute="height" multiplier="0.15" id="S7h-a0-ae9"/>
-                                                <constraint firstItem="CEQ-Nx-u3x" firstAttribute="centerX" secondItem="7Ds-t8-b22" secondAttribute="centerX" multiplier="1.2" id="cNz-bY-ejs"/>
-                                                <constraint firstItem="mOK-H0-gMA" firstAttribute="centerY" secondItem="7Ds-t8-b22" secondAttribute="centerY" multiplier="1.42" id="dGf-Qb-n0Q"/>
-                                                <constraint firstItem="CEQ-Nx-u3x" firstAttribute="height" secondItem="7Ds-t8-b22" secondAttribute="height" multiplier="0.3" id="eYG-7e-R7w"/>
-                                                <constraint firstItem="0XQ-1S-1VE" firstAttribute="width" secondItem="7Ds-t8-b22" secondAttribute="width" multiplier="0.9" id="efs-g4-QPV"/>
-                                                <constraint firstItem="0XQ-1S-1VE" firstAttribute="height" secondItem="7Ds-t8-b22" secondAttribute="height" multiplier="0.1" id="ieg-xN-RMy"/>
-                                                <constraint firstItem="mOK-H0-gMA" firstAttribute="centerX" secondItem="7Ds-t8-b22" secondAttribute="centerX" multiplier="0.35" id="mxi-RA-Ud5"/>
-                                                <constraint firstItem="ftJ-wZ-h3x" firstAttribute="centerY" secondItem="7Ds-t8-b22" secondAttribute="centerY" multiplier="0.35" id="nBi-Ex-9WU"/>
-                                                <constraint firstItem="0XQ-1S-1VE" firstAttribute="centerY" secondItem="7Ds-t8-b22" secondAttribute="centerY" multiplier="0.7" id="pBz-Ry-apw"/>
-                                                <constraint firstItem="ftJ-wZ-h3x" firstAttribute="width" secondItem="7Ds-t8-b22" secondAttribute="width" multiplier="0.45" id="tOJ-qM-oyT"/>
-                                                <constraint firstItem="CEQ-Nx-u3x" firstAttribute="width" secondItem="7Ds-t8-b22" secondAttribute="width" multiplier="0.25" id="wgh-eA-pDj"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="borderView" destination="U0M-4R-D1K" id="wXf-uw-CFf"/>
+                                            <outlet property="cal" destination="EwE-Wt-EWn" id="Dej-mN-XBe"/>
                                             <outlet property="calorieCount" destination="1NG-Rv-utT" id="kqF-OF-tF4"/>
+                                            <outlet property="time" destination="9OD-c1-gkC" id="qF0-4I-gsd"/>
                                             <outlet property="totalTimeLabel" destination="YI5-KT-iL3" id="aFx-8J-CId"/>
                                             <outlet property="workout1Label" destination="BjX-RH-pMO" id="FgV-w5-R5y"/>
+                                            <outlet property="workout1UnderlineView" destination="8XT-j0-hsu" id="ZSo-Md-OGk"/>
                                             <outlet property="workout2Label" destination="0co-gn-IcE" id="kLA-5s-fHO"/>
+                                            <outlet property="workout2UnderlineView" destination="TUA-gz-T7M" id="L76-fF-t8E"/>
                                             <outlet property="workout3Label" destination="lac-Lf-Am6" id="uHm-lh-zwO"/>
+                                            <outlet property="workout3UnderlineView" destination="L8Y-CZ-yu5" id="kBH-Vy-hM9"/>
                                             <outlet property="workout4Label" destination="cv4-cL-1S4" id="HR3-Zl-76c"/>
+                                            <outlet property="workout4UnderlineView" destination="IgU-YB-0j3" id="Cv1-7U-4jJ"/>
                                             <outlet property="workoutNameLabel" destination="ftJ-wZ-h3x" id="ydM-pW-s7o"/>
                                         </connections>
                                     </tableViewCell>
@@ -214,18 +222,20 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="9h2-wQ-jL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AWS-zy-emG"/>
-                            <constraint firstItem="9h2-wQ-jL2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JrA-aU-Ss4"/>
-                            <constraint firstItem="9h2-wQ-jL2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.125" constant="-22" id="e91-Up-hoU"/>
-                            <constraint firstItem="9h2-wQ-jL2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rgm-Ax-Fgt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7oD-iP-LvU"/>
                     <connections>
+                        <outlet property="backButton" destination="JsT-QG-GdB" id="ZM1-2Z-Bg2"/>
+                        <outlet property="createButton" destination="Z1I-Ad-Sb2" id="td1-eB-8SS"/>
+                        <outlet property="inactiveUnderlineView" destination="p5r-9i-lz6" id="njq-zw-5qC"/>
+                        <outlet property="pastButton" destination="s7Q-81-3aZ" id="OiA-YC-RZq"/>
                         <outlet property="planTableView" destination="v6Z-FT-T4G" id="s34-hB-3wM"/>
+                        <outlet property="selectWorkoutLabel" destination="Qct-tT-ha3" id="6jp-H0-vmU"/>
+                        <outlet property="titleLabel" destination="mTV-An-8hW" id="WY5-PC-OvE"/>
                         <outlet property="titleView" destination="9h2-wQ-jL2" id="fId-sG-wpT"/>
+                        <outlet property="underlineView" destination="mec-Yz-ppm" id="lGR-5X-wt8"/>
+                        <outlet property="upcomingButton" destination="kmZ-nD-Rn9" id="Rvz-9E-LB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -235,7 +245,7 @@
         <!--Select Workout View Controller-->
         <scene sceneID="Nj1-MP-gke">
             <objects>
-                <viewController storyboardIdentifier="CreateWorkoutStoryboard" id="0w5-04-5tN" customClass="SelectWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateWorkoutStoryboard" id="0w5-04-5tN" customClass="SelectWorkoutViewController" customModule="HIITnessPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nY9-pA-6oN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,7 +255,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="selectWorkoutCell" rowHeight="58" id="QFv-Iq-KvD" customClass="SelectWorkoutTableViewCell" customModule="Get_HIIT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="selectWorkoutCell" rowHeight="58" id="QFv-Iq-KvD" customClass="SelectWorkoutTableViewCell" customModule="HIITnessPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QFv-Iq-KvD" id="QBf-57-mi3">
@@ -253,11 +263,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yz3-Q7-LWF">
-                                                    <rect key="frame" x="0.0" y="3" width="374" height="52"/>
+                                                    <rect key="frame" x="0.0" y="3" width="0.0" height="52"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Workout name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPj-iK-0sV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="58"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="19"/>
                                                     <color key="textColor" name="Get-HIITBlack"/>
@@ -268,15 +278,15 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-GX-wXF">
-                                                    <rect key="frame" x="316.5" y="8.5" width="40.5" height="41"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-GX-wXF">
+                                                    <rect key="frame" x="-20.5" y="8.5" width="41" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Awc-GX-wXF" secondAttribute="height" multiplier="1:1" id="68e-sK-Ow0"/>
                                                     </constraints>
-                                                    <state key="normal" title="Info"/>
+                                                    <state key="normal" image="infoIcon"/>
                                                     <connections>
                                                         <action selector="infoButtonTapped:" destination="0w5-04-5tN" eventType="touchUpInside" id="cwF-WH-7Ys"/>
-                                                        <segue destination="b5P-Th-mfk" kind="show" identifier="selectWorkoutCell" id="TGW-od-b4P"/>
+                                                        <action selector="infoButtonTapped:" destination="QFv-Iq-KvD" eventType="touchUpInside" id="tn3-2M-nSB"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -331,7 +341,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="w7V-9w-pIY" kind="show" id="cpb-kq-soA"/>
+                                    <action selector="nextButtonTapped:" destination="0w5-04-5tN" eventType="touchUpInside" id="h2z-ad-891"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to select exercises for your HIIT workout. (Please select four)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-M4-xEc">
@@ -341,20 +351,20 @@
                                 <color key="textColor" name="Get-HIITBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-le-0L3">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-le-0L3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-xo-P5o">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-xo-P5o">
                                         <rect key="frame" x="62" y="50.5" width="290" height="33.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-hU-2mU">
-                                        <rect key="frame" x="29.5" y="45" width="44.5" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="gLw-hU-2mU" secondAttribute="height" multiplier="1:1" id="r2m-ce-F4R"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-hU-2mU">
+                                        <rect key="frame" x="18.5" y="45" width="66.5" height="44.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="backArrowIcon"/>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="0w5-04-5tN" eventType="touchUpInside" id="HYh-PL-1jq"/>
@@ -362,29 +372,17 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="centerX" secondItem="Hwx-le-0L3" secondAttribute="centerX" multiplier="0.25" id="JX0-o7-cVh"/>
-                                    <constraint firstItem="gl9-xo-P5o" firstAttribute="centerY" secondItem="Hwx-le-0L3" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="NJ3-M2-Wa2"/>
-                                    <constraint firstItem="gl9-xo-P5o" firstAttribute="centerX" secondItem="Hwx-le-0L3" secondAttribute="centerX" id="PfV-aW-iIf"/>
-                                    <constraint firstItem="gl9-xo-P5o" firstAttribute="height" secondItem="Hwx-le-0L3" secondAttribute="height" multiplier="0.3" constant="6.5" id="TeT-KC-BGI"/>
-                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="centerY" secondItem="Hwx-le-0L3" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="X6O-DD-YNo"/>
-                                    <constraint firstItem="gl9-xo-P5o" firstAttribute="width" secondItem="Hwx-le-0L3" secondAttribute="width" multiplier="0.7" id="gZ1-HN-gNr"/>
-                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="height" secondItem="Hwx-le-0L3" secondAttribute="height" multiplier="0.4" constant="8.5" id="pwn-VY-ka4"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Hwx-le-0L3" firstAttribute="centerX" secondItem="GhE-jh-gEB" secondAttribute="centerX" id="epb-Pg-XuV"/>
-                            <constraint firstItem="Hwx-le-0L3" firstAttribute="width" secondItem="nY9-pA-6oN" secondAttribute="width" id="jih-uw-cQ1"/>
-                            <constraint firstItem="Hwx-le-0L3" firstAttribute="height" secondItem="nY9-pA-6oN" secondAttribute="height" multiplier="0.125" constant="-22" id="tyr-Mt-0wx"/>
-                            <constraint firstItem="Hwx-le-0L3" firstAttribute="top" secondItem="nY9-pA-6oN" secondAttribute="top" id="zcq-e2-vYt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GhE-jh-gEB"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="gLw-hU-2mU" id="FBL-bp-ied"/>
                         <outlet property="exerciseTableView" destination="5DD-XH-k0d" id="zeJ-cR-Mo9"/>
+                        <outlet property="instructionLabel" destination="Zy0-M4-xEc" id="Whp-8C-jbJ"/>
                         <outlet property="nextButton" destination="dg3-3i-89k" id="Oa8-mP-Htp"/>
+                        <outlet property="titleLabel" destination="gl9-xo-P5o" id="rsP-me-Q9d"/>
                         <outlet property="titleView" destination="Hwx-le-0L3" id="QEb-tR-wVA"/>
                     </connections>
                 </viewController>
@@ -395,37 +393,39 @@
         <!--Description View Controller-->
         <scene sceneID="fr6-HK-kef">
             <objects>
-                <viewController id="b5P-Th-mfk" customClass="DescriptionViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="workoutDescription" id="b5P-Th-mfk" customClass="DescriptionViewController" customModule="HIITnessPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AdC-bx-qR1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-qJ-nLJ">
-                                <rect key="frame" x="20.5" y="398" width="373" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-qJ-nLJ">
+                                <rect key="frame" x="20.5" y="398" width="373" height="35.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="28"/>
                                 <color key="textColor" name="Get-HIITGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Workout Description)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-YW-Ndt">
-                                <rect key="frame" x="20.5" y="445" width="373" height="403"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout Description)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-YW-Ndt">
+                                <rect key="frame" x="20.5" y="444.5" width="373" height="403"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="22"/>
                                 <color key="textColor" name="Get-HIITBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-de-Q8G">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-de-Q8G">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-xE-Rd9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-xE-Rd9">
                                         <rect key="frame" x="103.5" y="50.5" width="207" height="33.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCU-eK-DiP">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCU-eK-DiP">
                                         <rect key="frame" x="29.5" y="45" width="44.5" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FCU-eK-DiP" secondAttribute="height" multiplier="1:1" id="q52-Jy-vgU"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="backArrowIcon"/>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="b5P-Th-mfk" eventType="touchUpInside" id="aLZ-FP-S6v"/>
@@ -433,45 +433,20 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="FCU-eK-DiP" firstAttribute="centerX" secondItem="a8o-de-Q8G" secondAttribute="centerX" multiplier="0.25" id="5uo-rb-VW9"/>
-                                    <constraint firstItem="aH5-xE-Rd9" firstAttribute="centerY" secondItem="a8o-de-Q8G" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="CBx-Hx-Ncb"/>
-                                    <constraint firstItem="aH5-xE-Rd9" firstAttribute="centerX" secondItem="a8o-de-Q8G" secondAttribute="centerX" id="LdC-Xx-Uqh"/>
-                                    <constraint firstItem="aH5-xE-Rd9" firstAttribute="height" secondItem="a8o-de-Q8G" secondAttribute="height" multiplier="0.3" constant="6.5" id="Nuf-Qf-k0r"/>
-                                    <constraint firstItem="aH5-xE-Rd9" firstAttribute="width" secondItem="a8o-de-Q8G" secondAttribute="width" multiplier="0.5" id="V4R-Lz-1j9"/>
-                                    <constraint firstItem="FCU-eK-DiP" firstAttribute="centerY" secondItem="a8o-de-Q8G" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="gzs-bI-63U"/>
-                                    <constraint firstItem="FCU-eK-DiP" firstAttribute="height" secondItem="a8o-de-Q8G" secondAttribute="height" multiplier="0.4" constant="8.5" id="v8f-Ka-FSE"/>
-                                </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-CM-ToJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-CM-ToJ">
                                 <rect key="frame" x="86" y="134" width="242" height="242"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Qfa-CM-ToJ" secondAttribute="height" multiplier="1:1" id="V5g-RG-xu4"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="centerX" secondItem="AdC-bx-qR1" secondAttribute="centerX" id="Bzt-LU-yJC"/>
-                            <constraint firstItem="a8o-de-Q8G" firstAttribute="top" secondItem="AdC-bx-qR1" secondAttribute="top" id="Gtp-au-Rpp"/>
-                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.27" id="MdN-3X-W0E"/>
-                            <constraint firstItem="a8o-de-Q8G" firstAttribute="centerX" secondItem="DYa-wh-pqx" secondAttribute="centerX" id="N0g-cu-kmb"/>
-                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="top" secondItem="a8o-de-Q8G" secondAttribute="bottom" constant="44" id="Nd1-to-HNl"/>
-                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="top" secondItem="Qfa-CM-ToJ" secondAttribute="bottom" constant="22" id="OTQ-px-Sa5"/>
-                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" multiplier="0.9" id="R1V-UV-hyl"/>
-                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="centerX" secondItem="AdC-bx-qR1" secondAttribute="centerX" id="StQ-sh-LYY"/>
-                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="centerX" secondItem="DYa-wh-pqx" secondAttribute="centerX" id="Wpl-q1-wYf"/>
-                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" multiplier="0.9" id="XQA-Zi-hs5"/>
-                            <constraint firstItem="a8o-de-Q8G" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.125" constant="-22" id="dTd-bF-iXc"/>
-                            <constraint firstItem="a8o-de-Q8G" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" id="fxv-wC-wiO"/>
-                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.45" id="rJh-4O-Lhg"/>
-                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="top" secondItem="2Su-qJ-nLJ" secondAttribute="bottom" constant="11" id="wC3-Qj-qTa"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DYa-wh-pqx"/>
                     </view>
                     <connections>
-                        <outlet property="HeaderTitleLabel" destination="aH5-xE-Rd9" id="AId-e4-ZFo"/>
+                        <outlet property="backButton" destination="FCU-eK-DiP" id="hAL-p1-2LF"/>
+                        <outlet property="descriptionLabel" destination="2Su-qJ-nLJ" id="TsF-Qj-C8i"/>
                         <outlet property="exerciseImageView" destination="Qfa-CM-ToJ" id="tgV-mA-aYB"/>
+                        <outlet property="titleLabel" destination="aH5-xE-Rd9" id="JzR-bR-nE5"/>
                         <outlet property="titleView" destination="a8o-de-Q8G" id="7TR-BM-uEV"/>
                         <outlet property="workoutInfoLabel" destination="XkK-YW-Ndt" id="q0q-rj-TTt"/>
                     </connections>
@@ -483,21 +458,21 @@
         <!--Past Workouts View Controller-->
         <scene sceneID="LPJ-8S-h5X">
             <objects>
-                <viewController storyboardIdentifier="PastWorkoutsStoryboard" id="V1z-VP-cyi" customClass="PastWorkoutsViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PastWorkoutsStoryboard" id="V1z-VP-cyi" customClass="PastWorkoutsViewController" customModule="HIITnessPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HbJ-Pg-BIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8M-dx-Ehl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8M-dx-Ehl">
                                 <rect key="frame" x="20" y="191" width="374" height="563"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pastWorkoutCell" rowHeight="74" id="4IE-ts-kUM" customClass="PastWorkoutsTableViewCell" customModule="Get_HIIT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pastWorkoutCell" rowHeight="74" id="4IE-ts-kUM" customClass="PastWorkoutsTableViewCell" customModule="HIITnessPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4IE-ts-kUM" id="3d3-6t-rbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="73.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFy-h0-4lx">
@@ -507,25 +482,40 @@
                                                     <color key="textColor" name="Get-HIITBlack"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="767-e1-vSM">
-                                                    <rect key="frame" x="20" y="11" width="66" height="52"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(calories)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="767-e1-vSM">
+                                                    <rect key="frame" x="20" y="11" width="72" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="Get-HIITBlack"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tFS-ig-KLM">
-                                                    <rect key="frame" x="294" y="3.5" width="66.5" height="66.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="tFS-ig-KLM" secondAttribute="height" multiplier="1:1" id="XwS-zu-CnN"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-Ok-ESw">
+                                                    <rect key="frame" x="192" y="20" width="62" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(time)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93B-pk-jNd">
+                                                    <rect key="frame" x="300" y="20" width="46" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veW-xb-tqJ">
+                                                    <rect key="frame" x="266" y="0.0" width="79" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="Get-HIITGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="705-GF-XvB">
+                                                    <rect key="frame" x="276" y="42" width="91" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="Get-HIITGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tFS-ig-KLM" firstAttribute="centerX" secondItem="3d3-6t-rbL" secondAttribute="centerX" multiplier="1.75" id="BWT-GS-wTe"/>
-                                                <constraint firstItem="tFS-ig-KLM" firstAttribute="height" secondItem="3d3-6t-rbL" secondAttribute="height" multiplier="0.9" id="KIL-3F-pkW"/>
-                                                <constraint firstItem="tFS-ig-KLM" firstAttribute="centerY" secondItem="3d3-6t-rbL" secondAttribute="centerY" id="qWK-VN-knV"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="5"/>
@@ -539,8 +529,11 @@
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="borderView" destination="43Q-Ok-ESw" id="nIy-6S-oQl"/>
                                             <outlet property="calorieLabel" destination="767-e1-vSM" id="Y0f-qs-a38"/>
-                                            <outlet property="workoutCompleteImageView" destination="tFS-ig-KLM" id="fes-Qy-OJe"/>
+                                            <outlet property="caloriesBurnedLabel" destination="705-GF-XvB" id="WEh-Qi-sTB"/>
+                                            <outlet property="timeExercisedLabel" destination="veW-xb-tqJ" id="jnb-5A-EgH"/>
+                                            <outlet property="timeLabel" destination="93B-pk-jNd" id="nor-R5-cte"/>
                                             <outlet property="workoutNameLabel" destination="LFy-h0-4lx" id="J40-H4-fpT"/>
                                         </connections>
                                     </tableViewCell>
@@ -554,30 +547,30 @@
                                 <rect key="frame" x="20" y="120" width="140" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
-                                <state key="normal" title="Upcoming">
+                                <state key="normal" title="Workouts">
                                     <color key="titleColor" name="Get-HIITGray"/>
                                 </state>
                                 <connections>
                                     <action selector="upcomingButtonTapped:" destination="V1z-VP-cyi" eventType="touchUpInside" id="bp8-rN-idE"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hos-9r-HsA">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hos-9r-HsA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-sy-bGa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-sy-bGa">
                                         <rect key="frame" x="103.5" y="50.5" width="207" height="33.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uec-TS-dld">
+                                        <rect key="frame" x="32" y="45" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Sqc-sy-bGa" firstAttribute="centerX" secondItem="Hos-9r-HsA" secondAttribute="centerX" id="JW3-at-Xx3"/>
-                                    <constraint firstItem="Sqc-sy-bGa" firstAttribute="height" secondItem="Hos-9r-HsA" secondAttribute="height" multiplier="0.3" constant="6.5" id="NF2-n2-xZf"/>
-                                    <constraint firstItem="Sqc-sy-bGa" firstAttribute="centerY" secondItem="Hos-9r-HsA" secondAttribute="centerY" multiplier="1.2" constant="13.25" id="U52-YH-zFw"/>
-                                    <constraint firstItem="Sqc-sy-bGa" firstAttribute="width" secondItem="Hos-9r-HsA" secondAttribute="width" multiplier="0.5" id="tDu-kO-4WX"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaP-9i-AAv">
                                 <rect key="frame" x="254" y="120" width="140" height="48"/>
@@ -592,28 +585,47 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Get-HIITPrimaryBlue"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xj-Gn-ZqD">
+                                <rect key="frame" x="101" y="104" width="159" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Get-HIITGray"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MyPlanSelectedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-4b-SUr">
+                                <rect key="frame" x="20" y="745" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVS-fP-FeH">
+                                <rect key="frame" x="293" y="778" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Hos-9r-HsA" firstAttribute="height" secondItem="HbJ-Pg-BIB" secondAttribute="height" multiplier="0.125" constant="-22" id="8A3-x9-VVt"/>
-                            <constraint firstItem="Hos-9r-HsA" firstAttribute="width" secondItem="HbJ-Pg-BIB" secondAttribute="width" id="90G-Pb-Vk3"/>
-                            <constraint firstItem="Hos-9r-HsA" firstAttribute="centerX" secondItem="M1s-54-3nC" secondAttribute="centerX" id="MKz-Er-lzp"/>
-                            <constraint firstItem="Hos-9r-HsA" firstAttribute="top" secondItem="HbJ-Pg-BIB" secondAttribute="top" id="wXx-fI-Ap9"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M1s-54-3nC"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="uec-TS-dld" id="rAI-OT-0QY"/>
+                        <outlet property="inactiveUnderlineView" destination="0Xj-Gn-ZqD" id="hVy-do-Hwx"/>
+                        <outlet property="myPlanImageView" destination="BnO-4b-SUr" id="L4R-ir-VnC"/>
+                        <outlet property="myPlanLabel" destination="EVS-fP-FeH" id="edE-FU-XXh"/>
+                        <outlet property="pastButton" destination="yaP-9i-AAv" id="45L-PB-RoF"/>
+                        <outlet property="planTableView" destination="t8M-dx-Ehl" id="le4-cQ-OtV"/>
+                        <outlet property="titleLabel" destination="Sqc-sy-bGa" id="y7D-m4-Ajq"/>
                         <outlet property="titleView" destination="Hos-9r-HsA" id="hxo-pV-epU"/>
+                        <outlet property="underlineView" destination="b0r-FF-4Xm" id="eEY-Fq-aMf"/>
+                        <outlet property="upcomingButton" destination="J6b-L3-inB" id="jnf-0i-20L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVR-87-SD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3822" y="-293"/>
+            <point key="canvasLocation" x="3821.739130434783" y="-293.30357142857139"/>
         </scene>
         <!--Create New Workout View Controller-->
         <scene sceneID="AqT-Kf-5Z8">
             <objects>
-                <viewController id="w7V-9w-pIY" customClass="CreateNewWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w7V-9w-pIY" customClass="CreateNewWorkoutViewController" customModule="HIITnessPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BHh-sN-arV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,8 +661,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Workout Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPX-Eb-8ju">
-                                <rect key="frame" x="41.5" y="120" width="331" height="37"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="41.5" y="120" width="331" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -658,7 +669,7 @@
                                 <rect key="frame" x="41.5" y="164" width="331" height="555.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="createWorkoutCell" rowHeight="150" id="2v4-q1-i3q" customClass="CreateWorkoutTableViewCell" customModule="Get_HIIT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="createWorkoutCell" rowHeight="150" id="2v4-q1-i3q" customClass="CreateWorkoutTableViewCell" customModule="HIITnessPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="331" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2v4-q1-i3q" id="ZVR-mh-fpj">
@@ -957,18 +968,19 @@
         <image name="GetReady" width="184.5" height="208"/>
         <image name="MyPlanSelectedIcon" width="50" height="50"/>
         <image name="MyPlanUnselectedIcon" width="50" height="50"/>
-        <image name="backArrowIcon" width="14" height="24"/>
+        <image name="backArrowIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="infoIcon" width="66.666664123535156" height="66.666664123535156"/>
         <namedColor name="Get-HIITBlack">
-            <color red="0.17254901960784313" green="0.16470588235294117" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17299999296665192" green="0.16500000655651093" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Get-HIITGray">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47099998593330383" green="0.47099998593330383" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Get-HIITPrimaryBlue">
-            <color red="0.035294117647058823" green="0.70196078431372544" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.035000000149011612" green="0.70200002193450928" blue="0.67500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Get-HIITPrimaryOrange">
-            <color red="1" green="0.50588235294117645" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.50599998235702515" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Get-HIITWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
